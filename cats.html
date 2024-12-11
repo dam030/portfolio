@@ -4,8 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            height: 10000px;
+        }
+
+        .menu-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-container > .menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 1050px;
+        }
+
+        .m_text {
+            width: 130px;
+            height: 30px;
+            
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            color: #FFEF00;
+        }
+
+        .main-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .main-img > img {
+            display: block;
+        }
+
+        .Cats-eyes {
+            width: 100vh;
+        }
+
+        .Cats-Logo {
+            width: 30vh;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="menu-container">
+        <div class="menu">
+            <a href="" class="m_text">HOME</a>
+            <a href="" class="m_text">TRAILER</a>
+            <a href="" class="m_text">SYNOPSIS</a>
+            <a href="" class="m_text">CHARACTERS</a>
+            <a href="" class="m_text">GALLERY</a>
+            <a href="" class="m_text">SOUNDTRACK</a>
+            <a href="" class="m_text">OTHERS</a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main-img">
+            <img src="img/Cats-eyes.png" alt="" class="Cats-eyes">
+            <img src="img/Cats-Logo.png" alt="" class="Cats-Logo">
+        </div>
+    </div>
 </body>
 </html>
