@@ -61,8 +61,6 @@
 .synopsis-container {
     width: 100%;
     height: 100vh;
-
-    background-color: aquamarine;
 }
 
 .back-img {
@@ -71,7 +69,7 @@
     position: relative;
     top: 90px;
 
-    background-color: coral;
+    background-image: url('img/background_1.jpg');
 }
 
 .synopsis-box {
@@ -91,14 +89,35 @@
 }
 
 .synopsis-logo {
-    width: 100px;
+    width: 170px;
     padding-bottom: 50px;
 }
 
 .synopsis-box > h2 {
-    padding-bottom: 20px;
+    font-size: 30px;
+    padding-bottom: 350px;
 }
 
 .synopsis-box > p {
+    font-size: 18px;
     color: #FFEF00;
+}
+
+
+
+.characters-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characters-contants {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.characters-contants > img {
 }
