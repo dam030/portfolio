@@ -11,72 +11,156 @@
         }
 
         body {
-            background-color: #000;
             height: 10000px;
+            background-color: #000;
         }
 
         .menu-container {
-            display: flex;
             width: 100%;
-            justify-content: center;
-            align-items: center;
+            height: 10000px;
+            /* 100%로 해도 전체 크기로 안 잡힘 */
+            position: absolute;
         }
 
-        .menu-container > .menu {
+        .menu {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 40px;
+            background-color: #000;
+
+            position: sticky;
+            top: 878px;
+            /* 바텀0으로 해도 고정이 안 되서 짜침 */
+        }
+
+        .menu-contants {
+            display: flex;
+            justify-content: center;
             width: 1050px;
         }
 
         .m_text {
             width: 130px;
-            height: 30px;
             
             text-align: center;
-            line-height: 30px;
+            line-height: 40px;
             text-decoration: none;
             color: #FFEF00;
         }
 
-        .main-img {
+
+
+        .home-container {
+            width: 100%;
+            height: 100vh;
+            /* 높이는 window height 구해서 넣고 싶음 */
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 100%;
         }
 
-        .main-img > img {
+        .home-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-img > img {
             display: block;
         }
 
         .Cats-eyes {
             width: 100vh;
+            margin-bottom: 200px;
         }
 
         .Cats-Logo {
-            width: 30vh;
+            width: 25vh;
+        }
+
+
+
+        .trailer-container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .trailer-contants {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .view-botton {
+            display: flex;
+            border: #FFEF00 solid 5px;
+            position: absolute;
+            bottom: -800px;
+            /* 위치 짜친다 */
+        }
+
+        .view-botton > a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bolder;
+            color: #FFEF00;
+        }
+
+
+
+        .synopsis-container {
+            width: 100%;
+            height: 100vh;
+
+            background-color: aquamarine;
         }
     </style>
 </head>
 <body>
     <div class="menu-container">
         <div class="menu">
-            <a href="" class="m_text">HOME</a>
-            <a href="" class="m_text">TRAILER</a>
-            <a href="" class="m_text">SYNOPSIS</a>
-            <a href="" class="m_text">CHARACTERS</a>
-            <a href="" class="m_text">GALLERY</a>
-            <a href="" class="m_text">SOUNDTRACK</a>
-            <a href="" class="m_text">OTHERS</a>
+            <div class="menu-contants">
+                <a href="" class="m_text">HOME</a>
+                <a href="" class="m_text">TRAILER</a>
+                <a href="" class="m_text">SYNOPSIS</a>
+                <a href="" class="m_text">CHARACTERS</a>
+                <a href="" class="m_text">GALLERY</a>
+                <a href="" class="m_text">SOUNDTRACK</a>
+                <a href="" class="m_text">OTHERS</a>
+            </div>
         </div>
     </div>
 
-    <div class="main-container">
-        <div class="main-img">
+
+    <section class="home-container">
+        <div class="home-img">
             <img src="img/Cats-eyes.png" alt="" class="Cats-eyes">
             <img src="img/Cats-Logo.png" alt="" class="Cats-Logo">
         </div>
-    </div>
+    </section>
+
+
+    <section class="trailer-container">
+        <div class="trailer-contants">
+            <img src="img/gif예시.jpg" alt="" class="trailer">
+            <div class="view-botton">
+                <a href="https://www.youtube.com/watch?v=3VptPGgs14Q&embeds_widget_referrer=https%3A%2F%2Ftour.catsthemusical.com%2F&embeds_referring_euri=https%3A%2F%2Fcdn.embedly.com%2F&embeds_referring_origin=https%3A%2F%2Fcdn.embedly.com&source_ve_path=MjM4NTE">VIEW MORE</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="synopsis-container">
+        <div class="synopsis-contants">
+            <img src="img/Cats-Logo.png" alt="" class="synopsis-logo">
+            <h2>일 년에 단 한 번 가장 특별한 날,<br>젤리클 고양이들은 한 자리에 모여 고양이들만의 특별한 축제를 연다.</h2>
+            <p>오늘 밤, 운명을 바꿀 마법 같은 기회가 찾아온다!<br>기적같은 기회를 잡기 위한 축제가 점점 무르익는 동안 뜻하지 않는 위기가 찾아오는데...</p>
+            <figure class="back-img"></figure>
+        </div>
+    </section>
 </body>
 </html>
