@@ -1,0 +1,102 @@
+.home-container {
+    width: 100%;
+    height: 100vh;
+    /* 높이는 window height 구해서 넣고 싶음 */
+    display: flex;
+    justify-content: center;
+}
+
+.home-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img > img {
+    display: block;
+}
+
+.Cats-eyes {
+    width: 100vh;
+    margin-bottom: 200px;
+}
+
+.Cats-Logo {
+    width: 25vh;
+}
+
+
+
+.trailer-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.trailer-contants {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.view-botton {
+    display: flex;
+    border: #FFEF00 solid 5px;
+    position: absolute;
+    bottom: -800px;
+    /* 위치 짜친다 */
+}
+
+.view-botton > a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #FFEF00;
+}
+
+
+
+.synopsis-container {
+    width: 100%;
+    height: 100vh;
+
+    background-color: aquamarine;
+}
+
+.synopsis-contants {
+
+}
+
+.back-img {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 150px;
+
+    background-color: coral;
+}
+
+.synopsis-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    top: 2100px;
+    /* 정확한 값을 주는게 짜침침 */
+}
+
+.synopsis-logo {
+    width: 100px;
+}
+
+.synopsis-box > p {
+    color: #FFEF00;
+}
