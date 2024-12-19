@@ -1,0 +1,279 @@
+/* 메뉴 시작 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    background-color: #000;
+}
+
+.menu-container {
+    width: 100%;
+    height: 10000px;
+    /* 100%로 해도 전체 크기로 안 잡힘 */
+    position: absolute;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+
+    position: sticky;
+    top: 0vh;
+    /* 바텀0으로 해도 고정이 안 됨 */
+    z-index: 1000;
+}
+
+.menu-contants {
+    display: flex;
+    justify-content: center;
+    width: 1050px;
+}
+
+.m_text {
+    padding: 20px;  
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    color: #FFEF00;
+}
+
+/* 메뉴 끝 */
+
+
+
+
+/* 홈 시작 */
+.home-container {
+    width: 100%;
+    height: 100vh;
+    /* 높이는 window height 구해서 넣고 싶음 */
+    display: flex;
+    justify-content: center;
+}
+
+.home-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img > img {
+    display: block;
+}
+
+.Cats-eyes {
+    width: 100vh;
+    margin-bottom: 200px;
+}
+
+.Cats-Logo {
+    width: 25vh;
+}
+/* 홈 끝 */
+
+
+
+
+/* 트레일러 시작 */
+.trailer-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.trailer-contants {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.view-botton {
+    display: flex;
+    border: #FFEF00 solid 5px;
+    position: absolute;
+    bottom: -800px;
+    /* 위치 짜친다 */
+}
+
+.view-botton > a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #FFEF00;
+}
+/* 트레일러 끝 */
+
+
+
+
+/* 시놉시스 시작 */
+.synopsis-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.synopsis-back-img {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    top: 90px;
+
+    background-image: url('/img/background_1.jpg');
+}
+
+.synopsis-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    top: 2100px;
+    /* 정확한 값을 주는게 짜침침 */
+}
+
+.synopsis-logo {
+    width: 170px;
+    padding-bottom: 50px;
+}
+
+.synopsis-box > h2 {
+    font-size: 30px;
+    padding-bottom: 350px;
+}
+
+.synopsis-box > p {
+    font-size: 18px;
+    color: #FFEF00;
+}
+/* 시놉시스 끝 */
+
+
+
+
+/* 캐릭터 시작 */
+.characters-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characters-contants {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+/* .characters-contants > img {
+} */
+/* 캐릭터 끝 */
+
+
+
+
+/* 갤러리 시작 */
+/* 갤러리 끝 */
+
+
+
+
+/* 사운드트랙 시작 */
+/* 사운드트랙 끝 */
+
+
+
+
+/* 예약 시작 */
+.reservation-container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.reservation-contants {
+    width: 100%;
+    height: 700px;
+
+    background-image: url('/img/background_2.jpg');
+}
+
+.r-contant {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #fff;
+}
+
+.r-contant > h1 {
+    font-size: 46px;
+    font-weight: bolder;
+    margin-bottom: 24px;
+}
+
+.r-contant > h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: 60px;
+}
+
+.r-contant > h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.r-contant > p {
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation-img > img {
+    width: 250px;
+    /* border-radius: 5px; */
+    padding: 10px;
+}
+
+.reservation > p {
+    font-size: 12px;
+    color: rgb(172, 172, 172);
+}
+/* 예약 끝 */
+
+
+
+
+/* 푸터 시작 */
+.footer-logo > img {
+    width: 300px;
+}
+/* 푸터 끝 */
