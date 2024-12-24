@@ -5,7 +5,7 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-color: #000;
 }
@@ -100,7 +100,7 @@ body {
     display: flex;
     border: #FFEF00 solid 5px;
     position: absolute;
-    bottom: -800px;
+    bottom: -90%;
     /* 위치 짜친다 */
 }
 
@@ -177,12 +177,53 @@ body {
 
 .characters-contants {
     display: flex;
-    justify-content: center;
-    width: 100vw;
+    /* justify-content: center; */
+    width: 100%;
 }
 
-/* .characters-contants > img {
-} */
+.characters-contants > li > img {
+    width: 1280px;
+    height: 720px;
+    background-color: brown;
+}
+
+.characters-text {
+    position: absolute;
+    width: 100%;
+    top: 3000px;
+    color: #fff;
+}
+
+.characters-text > h1 {
+    font-size: 100px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.characters-text > h3 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.characters-text > p {
+    line-height: 20px;
+}
+
+
+.characters1 > .characters-text {
+    top: 3480px;
+    left: 30px;
+}
+
+.characters2 > .characters-text {
+    top: 3480px;
+    left: 1300px;
+}
+
+.characters3 > .characters-text {
+    top: 3480px;
+    left: 2580px;
+}
 /* 캐릭터 끝 */
 
 
@@ -194,7 +235,7 @@ body {
     height: 100vh;
 }
 
-.gallery-contants {
+.gallery-main-container {
     width: 100%;
     height: 100%;
 
@@ -204,10 +245,22 @@ body {
     align-items: center;
 }
 
-.gallery-contants > figure {
+.gallery-main-container > figure {
     width: 100%;
     height: 700px;
     background-color: aquamarine;
+}
+
+.button-container {
+    width: 99%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container > button {
+    width: 40px;
+    height: 70px;
 }
 
 .gallery-box {
