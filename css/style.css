@@ -12,8 +12,7 @@ body {
 
 .menu-container {
     width: 100%;
-    height: 10000px;
-    /* 100%로 해도 전체 크기로 안 잡힘 */
+    height: 800vh;
     position: absolute;
 }
 
@@ -321,18 +320,18 @@ body {
 .soundtrack-container {
     width: 100%;
     height: 100vh;
-
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: darksalmon;
 }
 
 .soundtrack-contants {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .soundtrack {
@@ -455,7 +454,38 @@ body {
 
 
 /* 푸터 시작 */
+.footer-container {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.footer-contants {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
 .footer-logo > img {
     width: 300px;
+}
+
+.sns-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns > img{
+    height: 80px;
 }
 /* 푸터 끝 */
