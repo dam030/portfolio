@@ -326,6 +326,7 @@ body {
 }
 
 .soundtrack-contants {
+    position: relative;
     width: 100%;
     height: 100%;
 
@@ -335,19 +336,37 @@ body {
 }
 
 .soundtrack {
-    height: 800px;
+    height: 750px;
+    width: 375px;
+
+    position: absolute;
 }
 
-.sound-back {
-    position: relative;
+.soundtrack-contants > .front {
+    top: 30px;
+    left: 90px;
+    transform: rotate(-4deg);
+}
+
+.soundtrack-contants > .back {
+    bottom: 30px;
+    right: 90px;
+    transform: rotate(4deg);
+
+    display: flex;
+    justify-content: center;
+}
+
+.soundtrack > img {
+    height: 750px;
 }
 
 .sound-button {
-    width: 90%;
+    width: 75%;
     position: absolute;
     display: flex;
     justify-content: space-between;
-    bottom: 45px;
+    bottom: 5%;
 }
 
 .sound-button > button {
