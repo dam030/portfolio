@@ -343,7 +343,16 @@ body {
 }
 
 .sound-button {
+    width: 90%;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 45px;
+}
+
+.sound-button > button {
+    width: 50px;
+    height: 50px;
 }
 /* 사운드트랙 끝 */
 
