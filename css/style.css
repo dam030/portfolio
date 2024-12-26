@@ -57,7 +57,6 @@ img {
 .home-container {
     width: 100%;
     height: 100vh;
-    /* 높이는 window height 구해서 넣고 싶음 */
     display: flex;
     justify-content: center;
 }
@@ -71,7 +70,7 @@ img {
 }
 
 .Cats-eyes {
-    width: 80vw;
+    width: 70vw;
     margin-bottom: 100px;
 }
 
@@ -209,9 +208,9 @@ img {
     padding: 16px;
     border-radius: 25px;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     overflow: hidden;
 }
@@ -258,86 +257,80 @@ img {
     opacity: 0;
 }
 
-.characters-text {
-    position: absolute;
+.characters-text-box {
     width: 100%;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    position: relative;
     opacity: 0;
 }
 
-.characters:hover .characters-text {
+.characters:hover .characters-text-box {
     opacity: 1;
 }
 
-.characters-text > h1 {
+.characters-text{
+    position: relative;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.characters-text > .character-name > h1 {
     font-size: 80px;
     font-weight: bolder;
     margin-bottom: 10px;
 }
-
-.characters-text > h3 {
+.characters-text > .character-name > h3 {
     font-size: 26px;
     font-weight: bolder;
 }
-
 .characters-text > p {
     line-height: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 
-.number1 > .characters-text {
-    left: 20px;
-    bottom: 0px;
+.number1 .characters-text-box > .characters-text > .character-name {
+    position: absolute;
+    top: 390px;
+}
+.number1 .characters-text-box > .characters-text > P {
+    text-align: right;
 }
 
-.number1 > .characters-text > P {
+.number2 .characters-text-box > .characters-text {
+    position: absolute;
+    bottom: 0;
+}
+
+.number3 .characters-text-box > .characters-text {
+    width: 100%;
     position: absolute;
     text-align: right;
-    left: 150px;
-    top: -370px;
+    bottom: 0;
 }
-
-.number2 > .characters-text {
-    left: 30px;
-    top: 350px;
-}
-
-.number3 > .characters-text {
-    text-align: right;
-    right: 20px;
-    top: 10px;
-}
-
-.number3 > .characters-text > p {
+.number3 .characters-text-box > .characters-text > .character-name {
+    width: 100%;
     position: absolute;
-    right: 0;
-    bottom: -360px;
+    top: -440px;
 }
 
-.number4 > .characters-text {
-    text-align: right;
-    right: 20px;
-    bottom: 10px;
-}
-
-.number4 > .characters-text > p {
-    position: absolute;
-    text-align: left;
-    top: -360px;
-    left: 40px;
-}
-
-.number5 > .characters-text {
-    left: 20px;
-    top: 10px;
-}
-
-.number5 > .characters-text > p {
+.number4 .characters-text-box > .characters-text {
     position: absolute;
     text-align: right;
-    right: 40px;
-    bottom: -360px;
+    bottom: 0;
+}
+.number4 .characters-text-box > .characters-text > .character-name {
+    position: absolute;
+    top: -440px;
+}
+
+.number5 .characters-text-box > .characters-text {
+    position: absolute;
+    text-align: right;
+    bottom: 0;
+}
+.number5 .characters-text-box > .characters-text > .character-name {
+    position: absolute;
+    top: -440px;
 }
 /* 캐릭터 끝 */
 
