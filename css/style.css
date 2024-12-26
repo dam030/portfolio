@@ -10,6 +10,10 @@ body {
     background-color: #000;
 }
 
+img {
+    display: block;
+}
+
 .menu-container {
     width: 100%;
     height: 800vh;
@@ -27,7 +31,7 @@ body {
     position: sticky;
     top: 0vh;
     /* 바텀0으로 해도 고정이 안 됨 */
-    z-index: 1000;
+    z-index: 1;
 }
 
 .menu-contants {
@@ -59,23 +63,20 @@ body {
 }
 
 .home-img {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.home-img > img {
-    display: block;
-}
-
 .Cats-eyes {
-    width: 100vh;
-    margin-bottom: 200px;
+    width: 80vw;
+    margin-bottom: 100px;
 }
 
 .Cats-Logo {
-    width: 25vh;
+    width: 20vw;
 }
 /* 홈 끝 */
 
@@ -186,25 +187,75 @@ body {
 .characters-container {
     width: 100%;
     height: 100vh;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .characters-contants {
+    width: 90%;
+    height: 100%;
     display: flex;
-    /* justify-content: center; */
-    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .characters {
+    width: 50%;
+    height: 500px;
+
     position: relative;
+    margin: 10px;
+    padding: 16px;
+    border-radius: 25px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
 }
 
-.characters-contants > li > img {
-    height: 500px;
-    background-color: brown;
+.characters:nth-child(1) {
+    background: url(../img/characters/멍커스트랩.jpg);
+    background-position: center center;
+}
+.characters:nth-child(2) {
+    background: url(../img/characters/올드듀터로노미.jpg);
+    background-position: 90% center;
+}
+.characters:nth-child(3) {
+    background: url(../img/characters/그리자벨라.jpg);
+    background-position: 30% center;
+}
+.characters:nth-child(4) {
+    background: url(../img/characters/미스토펠리스.jpg);
+    background-position: center center;
+}
+.characters:nth-child(5) {
+    background: url(../img/characters/럼텀터거.jpg);
+    background-position: 53% center;
+}
+
+.characters:hover {
+    background-size: cover;
+    flex-shrink: 0;
+    transition: 0.6s;
+}
+
+.characters-img {
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 532px;
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.characters:hover .characters-img {
+    opacity: 0;
 }
 
 .characters-text {
@@ -212,6 +263,11 @@ body {
     width: 100%;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+.characters:hover .characters-text {
+    opacity: 1;
 }
 
 .characters-text > h1 {
@@ -346,14 +402,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darksalmon;
 }
 
 .soundtrack-contants {
     position: relative;
-    width: 50%;
+    width: 750px;
     height: 100%;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .soundtrack {
@@ -365,13 +423,13 @@ body {
 
 .soundtrack-contants > .front {
     top: 60px;
-    left: 90px;
+    left: 0;
     transform: rotate(-4deg);
 }
 
 .soundtrack-contants > .back {
     bottom: 60px;
-    right: 90px;
+    right: 0;
     transform: rotate(5deg);
 
     display: flex;
@@ -504,11 +562,28 @@ body {
 }
 
 .sns-link {
+    width: 350px;
     display: flex;
     justify-content: space-between;
 }
 
+.sns-link > li {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .sns > img{
-    height: 80px;
+    height: 60px;
+    position: relative;
+}
+
+.sns-link :nth-child(2) > a > img {
+    height: 50px;
+}
+.sns-link :nth-last-child(1) > a > img {
+    height: 50px;
 }
 /* 푸터 끝 */
