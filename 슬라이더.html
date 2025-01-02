@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>이미지슬라이더</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #000;
+            }
+
+            .slider {
+                width: 80%;
+                max-width: 1000px;
+                position: relative;
+            }
+
+            .slides img {
+                display: none;
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .slides img.active {
+                display: block;
+            }
+
+            .thumbnails {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .thumbnails img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                margin: 0 5px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: 0.2s;
+                border: 2px solid transparent;
+            }
+
+            .thumbnails img.active {
+                transform: scale(1.1);
+                border: 2px solid #fff;
+                opacity: 1;
+            }
+
+            .thumbnails img:hover {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                font-size: 24px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background-color 0.3s;
+            }
+
+            .arrow:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+                color: #000;
+            }
+
+            .arrow.prev {
+                left: 10px;
+            }
+
+            .arrow.next {
+                right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slider">
+            <!-- 큰 이미지 슬라이드 -->
+            <div class="slides">
+                <img
+                    src="./img/gallery_1.jpg"
+                    alt="Image 1"
+                    class="active"
+                />
+                <img src="./img/gallery_2.jpg" alt="Image 2" />
+                <img src="./img/gallery_3.png" alt="Image 3" />
+                <img src="./img/gallery_4.png" alt="Image 4" />
+                <img src="./img/gallery_5.jpg" alt="Image 5" />
+            </div>
+
+            <!-- 화살표 버튼 -->
+            <button class="arrow prev">&lt;</button>
+            <button class="arrow next">&gt;</button>
+
+            <!-- 작은 이미지 (dot 역할) -->
+            <div class="thumbnails">
+                <img
+                    src="./img/gallery_1.jpg"
+                    alt="Thumbnail 1"
+                    class="thumb active"
+                    data-index="0"
+                />
+                <img
+                    src="./img/gallery_2.jpg"
+                    alt="Thumbnail 2"
+                    class="thumb"
+                    data-index="1"
+                />
+                <img
+                    src="./img/gallery_3.png"
+                    alt="Thumbnail 3"
+                    class="thumb"
+                    data-index="2"
+                />
+                <img
+                    src="./img/gallery_4.png"
+                    alt="Thumbnail 4"
+                    class="thumb"
+                    data-index="3"
+                />
+                <img
+                    src="./img/gallery_5.jpg"
+                    alt="Thumbnail 5"
+                    class="thumb"
+                    data-index="4"
+                />
+            </div>
+        </div>
+
+        <script>
+            // 큰 이미지와 썸네일 요소 가져오기
+            const slides = document.querySelectorAll(".slides img");
+            const thumbnails = document.querySelectorAll(".thumbnails img");
+
+            // 이전, 다음 버튼 가져오기
+            const prevButton = document.querySelector(".arrow.prev");
+            const nextButton = document.querySelector(".arrow.next");
+
+            // 현재 슬라이드 인덱스
+            let currentIndex = 0;
+
+            // 함수: 슬라이드 업데이트
+            function updateSlide(index) {
+                // 모든 슬라이드와 썸네일에서 'active' 제거
+                slides.forEach((slide) => slide.classList.remove("active"));
+                thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+
+                // 현재 슬라이드와 썸네일에 'active' 추가
+                slides[index].classList.add("active");
+                thumbnails[index].classList.add("active");
+            }
+
+            // 이전 버튼 클릭 이벤트
+            prevButton.addEventListener("click", () => {
+                currentIndex =
+                    (currentIndex - 1 + slides.length) % slides.length; // 이전 슬라이드로 이동 (순환)
+                updateSlide(currentIndex);
+            });
+
+            // 다음 버튼 클릭 이벤트
+            nextButton.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % slides.length; // 다음 슬라이드로 이동 (순환)
+                updateSlide(currentIndex);
+            });
+
+            // 썸네일 클릭 이벤트
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener("click", () => {
+                    currentIndex = index; // 클릭한 썸네일의 인덱스로 이동
+                    updateSlide(currentIndex);
+                });
+            });
+
+            // 자동 슬라이드 기능 (옵션)
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length; // 다음 슬라이드로 이동
+                updateSlide(currentIndex);
+            }, 5000); // 5초마다 슬라이드 전환
+        </script>
+    </body>
+</html>

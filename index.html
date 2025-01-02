@@ -179,22 +179,75 @@
 
     <section class="gallery-container">
         <div class="gallery-contants">
-            <div class="gallery-main-container">
-                <figure class="main-img"></figure>
-                <div class="button-container">
-                    <button class="front"></button>
-                    <button class="next"></button>
-                </div>
+            <div class="gallery-main">
+                <img 
+                    src="img/gallery_1.jpg"
+                    alt="Image 1"
+                    class="active"
+                >
+                <img 
+                    src="img/gallery_2.jpg"
+                    alt="Image 2"
+                    >
+                <img 
+                    src="img/gallery_3.png"
+                    alt="Image 3" 
+                    style="object-position: center 10%;"
+                    >
+                <img 
+                    src="img/gallery_4.png"
+                    alt="Image 4" 
+                    style="object-position: center 45%;"
+                    >
+                <img 
+                    src="img/gallery_5.jpg"
+                    alt="Image 5" 
+                    style="object-position: center 45%;"
+                    >
             </div>
-            <div class="gallery-box">
-                <img src="img/gallery_1.jpg" alt="" class="gallery1">
-                <img src="img/gallery_2.jpg" alt="" class="gallery2">
-                <img src="img/gallery_3.png" alt="" class="gallery3">
-                <img src="img/gallery_4.png" alt="" class="gallery4">
-                <img src="img/gallery_5.jpg" alt="" class="gallery5">
+            <div class="button-container">
+                <button class="arrow prev">
+                    <img src="./img/arrow.png" alt="">
+                </button>
+                <button class="arrow next">
+                    <img src="./img/arrow.png" alt="">
+                </button>
+            </div>
+            <div class="thumbnails">
+                <img
+                    src="img/gallery_1.jpg"
+                    alt="Thumbnail 1"
+                    class="thumb active"
+                    data-index="0"
+                >
+                <img
+                    src="img/gallery_2.jpg"
+                    alt="Thumbnail 2"
+                    class="thumb"
+                    data-index="1"
+                >
+                <img
+                    src="img/gallery_3.png"
+                    alt="Thumbnail 3"
+                    class="thumb"
+                    data-index="2"
+                >
+                <img
+                    src="img/gallery_4.png"
+                    alt="Thumbnail 4"
+                    class="thumb"
+                    data-index="3"
+                >
+                <img
+                    src="img/gallery_5.jpg"
+                    alt="Thumbnail 5"
+                    class="thumb"
+                    data-index="4"
+                >
             </div>
         </div>
     </section>
+    <script src="./css/gallery.js"></script>
     
     
     <section class="soundtrack-container">
