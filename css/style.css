@@ -16,22 +16,17 @@ img {
 
 .menu-container {
     width: 100%;
-    height: 800vh;
-    position: absolute;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
 }
 
 .menu {
     display: flex;
     justify-content: center;
 
-    width: 100%;
-    height: 40px;
     background-color: #000;
-
-    position: sticky;
-    top: 0vh;
-    /* 바텀0으로 해도 고정이 안 됨 */
-    z-index: 1;
 }
 
 .menu-contants {
@@ -47,6 +42,9 @@ img {
     text-decoration: none;
     color: #FFEF00;
 }
+.page {
+    font-weight: bolder;
+}
 
 /* 메뉴 끝 */
 
@@ -57,6 +55,16 @@ img {
 .home-container {
     width: 100%;
     height: 100vh;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.home-contents {
+    width: 100%;
+    height: 90%;
+
     display: flex;
     justify-content: center;
 }
@@ -100,6 +108,7 @@ img {
     width: 100%;
     height: 100%;
     border: none;
+    pointer-events: none;
 }
 
 .view-botton {
@@ -136,10 +145,7 @@ img {
     width: 100%;
     height: 100%;
 
-    /* display: flex;
-    align-items: center;
-    position: relative; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .synopsis-back-img {
@@ -180,7 +186,6 @@ img {
 .synopsis-text {
     /* height: 100px; */
     position: absolute;
-    /* overflow: hidden; */
     top: 450px;
 }
 
@@ -230,7 +235,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    transition: 0.6s;
     overflow: hidden;
 }
 
@@ -258,7 +263,6 @@ img {
 .characters:hover {
     background-size: cover;
     flex-shrink: 0;
-    transition: 0.6s;
 }
 
 .characters-img {
@@ -359,13 +363,11 @@ img {
 .gallery-container {
     width: 100%;
     height: 100vh;
-
-    background-color: crimson;
 }
 
 .gallery-contants {
     width: 100%;
-    height: 100%;
+    height: 97%;
 
     position: relative;
     display: flex;
@@ -453,6 +455,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    background-color: aquamarine;
 }
 
 .soundtrack-contants {
@@ -473,13 +477,13 @@ img {
 }
 
 .soundtrack-contants > .front {
-    top: 60px;
+    top: 40px;
     left: 0;
     transform: rotate(-4deg);
 }
 
 .soundtrack-contants > .back {
-    bottom: 60px;
+    bottom: 80px;
     right: 0;
     transform: rotate(5deg);
 
@@ -520,17 +524,20 @@ img {
 .reservation-contants {
     width: 100%;
     height: 700px;
-
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: url('/img/background_2.jpg');
 }
 
 .r-contant {
     width: 100%;
-    height: 100%;
+    height: 80%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 
@@ -542,26 +549,22 @@ img {
     font-size: 46px;
     line-height: 55px;
     font-weight: bolder;
-    margin-bottom: 24px;
 }
 
 .r-contant > h2 {
     font-size: 32px;
     line-height: 40px;
     font-weight: bolder;
-    margin-bottom: 60px;
 }
 
 .r-contant > h3 {
     font-size: 28px;
     line-height: 32px;
-    margin-bottom: 24px;
 }
 
 .r-contant > p {
     font-size: 15px;
     line-height: 20px;
-    margin-bottom: 60px;
 }
 
 .reservation {

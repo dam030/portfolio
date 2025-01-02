@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .section {
+            height: 100vh;
+        }
+
+        @media(max-width:1024px) {
+            body {
+                overflow: auto;
+            }
+
+            .section {
+                height: auto;
+                /* 일반 스크롤에서 섹션 높이를 자동으로 설정 */
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="menu-container">
         <div class="menu">
             <ul class="menu-contants">
                 <li>
-                    <a href="#" class="m_text">
+                    <a href="#" class="m_text" data-target="section1">
                         HOME
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="m_text">
+                    <a href="#" class="m_text" data-target="section2">
                         TRAILER
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="m_text">
+                    <a href="#" class="m_text" data-target="section3">
                         SYNOPSIS
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="m_text">
+                    <a href="#" class="m_text" data-target="section4">
                         CHARACTERS
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="m_text">
+                    <a href="#" class="m_text" data-target="section5">
                         GALLERY
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="m_text">
+                    <a href="#" class="m_text" data-target="section6">
                         SOUNDTRACK
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="m_text">
+                    <a href="#" class="m_text" data-target="section7">
                         RESERVATION
                     </a>
                 </li>
@@ -50,288 +72,253 @@
         </div>
     </div>
 
-
-    <section class="home-container">
-        <figure class="home-img">
-            <img src="img/Cats-eyes.png" alt="" class="Cats-eyes">
-            <img src="img/Cats-Logo.png" alt="" class="Cats-Logo">
-        </figure>
-    </section>
-
-
-    <section class="trailer-container">
-        <div class="trailer-contants">
-            <iframe src="https://www.youtube.com/embed/3VptPGgs14Q?autoplay=1&mute=1&loop=1&playlist=3VptPGgs14Q&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <div class="view-botton">
-                <a href="https://youtu.be/3VptPGgs14Q?si=LhZq04G7kkh7JwU4">VIEW MORE</a>
+    <main id="fullpage">
+        <section class="home-container section" id="section1">
+            <div class="home-contents">
+                <figure class="home-img">
+                    <img src="img/Cats-eyes.png" alt="" class="Cats-eyes">
+                    <img src="img/Cats-Logo.png" alt="" class="Cats-Logo">
+                </figure>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <section class="synopsis-container">
-        <div class="synopsis-contants">
-            <figure class="synopsis-back-img"></figure>
-            <div class="synopsis-box">
-                <img src="img/Cats-Logo.png" alt="" class="synopsis-logo">
-                <div class="synopsis-text">
-                    <h2>
-                        일 년에 단 한 번 가장 특별한 날,
-                        <br>
-                        젤리클 고양이들은 한 자리에 모여 고양이들만의 특별한 축제를 연다.
-                    </h2>
-                    <p>
-                        오늘 밤, 운명을 바꿀 마법 같은 기회가 찾아온다!
-                        <br>
-                        기적같은 기회를 잡기 위한 축제가 점점 무르익는 동안 뜻하지 않는 위기가 찾아오는데...
-                    </p>
+        <section class="trailer-container section" id="section2">
+            <div class="trailer-contants">
+                <iframe
+                    src="https://www.youtube.com/embed/3VptPGgs14Q?autoplay=1&mute=1&loop=1&playlist=3VptPGgs14Q&controls=0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="view-botton">
+                    <a href="https://youtu.be/3VptPGgs14Q?si=LhZq04G7kkh7JwU4">VIEW MORE</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <section class="characters-container">
-        <ul class="characters-contants">
-            <li class="characters number1">
-                <div class="characters-img"></div>
-                <div class="characters-text-box">
-                    <div class="characters-text">
-                        <div class="character-name">
-                            <h3>사회자 고양이</h3>
-                            <h1>멍커스트랩</h1>
-                        </div>
-                        <p>
-                            나이 든 고양이와 함께 암고양이와 새끼 고양이를 보호해 종종 &#39;새끼 고양이의 보호자&#39;라고 불린다.
+        <section class="synopsis-container section" id="section3">
+            <div class="synopsis-contants">
+                <figure class="synopsis-back-img"></figure>
+                <div class="synopsis-box">
+                    <img src="img/Cats-Logo.png" alt="" class="synopsis-logo">
+                    <div class="synopsis-text">
+                        <h2>
+                            일 년에 단 한 번 가장 특별한 날,
                             <br>
-                            젊은 세대에게 이야기를 전달하는 역할을 하고 있다.
+                            젤리클 고양이들은 한 자리에 모여 고양이들만의 특별한 축제를 연다.
+                        </h2>
+                        <p>
+                            오늘 밤, 운명을 바꿀 마법 같은 기회가 찾아온다!
+                            <br>
+                            기적같은 기회를 잡기 위한 축제가 점점 무르익는 동안 뜻하지 않는 위기가 찾아오는데...
                         </p>
                     </div>
                 </div>
-            </li>
-            <li class="characters number2">
-                <div class="characters-img"></div>
-                <div class="characters-text-box">
-                    <div class="characters-text">
-                        <div class="character-name">
-                            <h3>선지자 고양이</h3>
-                            <h1>올드 듀터로노미</h1>
-                        </div>
-                        <p>
-                            젤리클의 리더. 젤리클 고양이들에게는 스승님이자 오랜 조상님이기도 한 존재로,
-                            <br>
-                            모든 고양이들이 존경을 담아서 대한다.
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="characters number3">
-                <div class="characters-img"></div>
-                <div class="characters-text-box">
-                    <div class="characters-text">
-                        <div class="character-name">
-                            <h1>그리자벨라</h1>
-                            <h3>매혹적인 고양이</h3>
-                        </div>
-                        <p>
-                            과거 &#39;화려한 고양이 그리자벨라&#39;라고 불렸지만,
-                            <br>
-                            어떤 이유에서인지 노쇠하고 초라해져 다른 고양이들이 어울려주지 않고 있는 신세가 되었다.
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="characters number4">
-                <div class="characters-img"></div>
-                <div class="characters-text-box">
-                    <div class="characters-text">
-                        <div class="character-name">
-                            <h3>마법사 고양이</h3>
-                            <h1>미스토펠리스</h1>
-                        </div>
-                        <p>
-                            마법사의 혈통이지만 마법의 힘을 완전히 통제할 수 없는 어린 젤리클 고양이.
-                            <br>
-                            꾸준하게 마법의 힘을 연구하고 있으며, 아직 자신의 능력에 자신감이 없다.
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li class="characters number5">
-                <div class="characters-img"></div>
-                <div class="characters-text-box">
-                    <div class="characters-text">
-                        <div class="character-name">
-                            <h1>럼텀터거</h1>
-                            <h3>반항아 고양이</h3>
-                        </div>
-                        <p>
-                            자기주관이 뚜렷하고 다른 고양이들의 관심 받기를 좋아한다.
-                            <br>
-                            항상 눈에 띄고 섹시한 말썽쟁이 바람둥이로, 암고양이들에게 인기가 많다.
-                        </p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </section>
+            </div>
+        </section>
 
 
-    <section class="gallery-container">
-        <div class="gallery-contants">
-            <div class="gallery-main">
-                <img 
-                    src="img/gallery_1.jpg"
-                    alt="Image 1"
-                    class="active"
-                >
-                <img 
-                    src="img/gallery_2.jpg"
-                    alt="Image 2"
-                    >
-                <img 
-                    src="img/gallery_3.png"
-                    alt="Image 3" 
-                    style="object-position: center 10%;"
-                    >
-                <img 
-                    src="img/gallery_4.png"
-                    alt="Image 4" 
-                    style="object-position: center 45%;"
-                    >
-                <img 
-                    src="img/gallery_5.jpg"
-                    alt="Image 5" 
-                    style="object-position: center 45%;"
-                    >
-            </div>
-            <div class="button-container">
-                <button class="arrow prev">
-                    <img src="./img/arrow.png" alt="">
-                </button>
-                <button class="arrow next">
-                    <img src="./img/arrow.png" alt="">
-                </button>
-            </div>
-            <div class="thumbnails">
-                <img
-                    src="img/gallery_1.jpg"
-                    alt="Thumbnail 1"
-                    class="thumb active"
-                    data-index="0"
-                >
-                <img
-                    src="img/gallery_2.jpg"
-                    alt="Thumbnail 2"
-                    class="thumb"
-                    data-index="1"
-                >
-                <img
-                    src="img/gallery_3.png"
-                    alt="Thumbnail 3"
-                    class="thumb"
-                    data-index="2"
-                >
-                <img
-                    src="img/gallery_4.png"
-                    alt="Thumbnail 4"
-                    class="thumb"
-                    data-index="3"
-                >
-                <img
-                    src="img/gallery_5.jpg"
-                    alt="Thumbnail 5"
-                    class="thumb"
-                    data-index="4"
-                >
-            </div>
-        </div>
-    </section>
-    <script src="./css/gallery.js"></script>
-    
-    
-    <section class="soundtrack-container">
-        <div class="soundtrack-contants">
-            <div class="soundtrack front">
-                <img src="./img/soundtrack_front.png" alt="">
-            </div>
-            <div class="soundtrack back">
-                <img src="./img/soundtrack_back.png" alt="">
-                <div class="sound-button">
-                    <button class="sound-prev"></button>
-                    <button class="sound-play"></button>
-                    <button class="sound-stop"></button>
-                    <button class="sound-next"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="reservation-container">
-        <div class="reservation-contants">
-            <div class="r-contant">
-                <h1>
-                    앤드류 로이드 웨버의 기록을 깬 뮤지컬 CATS.
-                </h1>
-                <p>
-                    토머스 스턴스 엘리엇의 연작시인 &lt;지혜로운 고양이가 되기 위한 지침서(Old Possum`s Book of Practical Cats)&gt;을 각색하여 탄생한
-                    <br>
-                    이 &#39;혁신적인 뮤지컬&#39;은 음악과 댄스, 가사가 반짝이는 하모니로 여러분들의 눈과 귀를 즐겁게 해줄 겁니다.
-                </p>
-                <h3>
-                    &quot;시대를 초월한 음악, 화려한 세트, 훌륭한 출연진&quot;
-                </h3>
-                <p>
-                    숨 막히는 안무 그리고 잊을 수 없는 &#39;기억&#39;을 갖춘 CATS는 다른 어떤 뮤지컬과도 비교할 수 없는 마법과도 같은 뮤지컬입니다.
-                </p>
-                <h2>
-                    CATS가 다시 한번 여러분들에게 짜릿함을 선사하려 찾아옵니다.
-                </h2>
-                <div class="reservation">
-                    <a href="#" class="reservation-img">
-                        <img src="./img/reservation site.png" alt="">
-                    </a>
-                    <p>예매 사이트 바로가기</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <footer class="footer-container">
-        <div class="footer-contants">
-            <div class="footer-logo">
-                <img src="img/Cats-Logo.png" alt="">
-            </div>
-            <ul class="sns-link">
-                <li>
-                    <a href="https://www.facebook.com/CatstheMusical/" target="_blank" class="sns">
-                        <img src="./img/sns/facebook.png" alt="">
-                    </a>
+        <section class="characters-container section" id="section4">
+            <ul class="characters-contants">
+                <li class="characters number1">
+                    <div class="characters-img"></div>
+                    <div class="characters-text-box">
+                        <div class="characters-text">
+                            <div class="character-name">
+                                <h3>사회자 고양이</h3>
+                                <h1>멍커스트랩</h1>
+                            </div>
+                            <p>
+                                나이 든 고양이와 함께 암고양이와 새끼 고양이를 보호해 종종 &#39;새끼 고양이의 보호자&#39;라고 불린다.
+                                <br>
+                                젊은 세대에게 이야기를 전달하는 역할을 하고 있다.
+                            </p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <a href="https://x.com/catsmusical" target="_blank" class="sns">
-                        <img src="./img/sns/twitter.png" alt="">
-                    </a>
+                <li class="characters number2">
+                    <div class="characters-img"></div>
+                    <div class="characters-text-box">
+                        <div class="characters-text">
+                            <div class="character-name">
+                                <h3>선지자 고양이</h3>
+                                <h1>올드 듀터로노미</h1>
+                            </div>
+                            <p>
+                                젤리클의 리더. 젤리클 고양이들에게는 스승님이자 오랜 조상님이기도 한 존재로,
+                                <br>
+                                모든 고양이들이 존경을 담아서 대한다.
+                            </p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <a href="https://www.instagram.com/catsmusical/" target="_blank" class="sns">
-                        <img src="./img/sns/instagram.png" alt="">
-                    </a>
+                <li class="characters number3">
+                    <div class="characters-img"></div>
+                    <div class="characters-text-box">
+                        <div class="characters-text">
+                            <div class="character-name">
+                                <h1>그리자벨라</h1>
+                                <h3>매혹적인 고양이</h3>
+                            </div>
+                            <p>
+                                과거 &#39;화려한 고양이 그리자벨라&#39;라고 불렸지만,
+                                <br>
+                                어떤 이유에서인지 노쇠하고 초라해져 다른 고양이들이 어울려주지 않고 있는 신세가 되었다.
+                            </p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <a href="https://www.youtube.com/user/catsmusical" target="_blank" class="sns">
-                        <img src="./img/sns/youtube.png" alt="">
-                    </a>
+                <li class="characters number4">
+                    <div class="characters-img"></div>
+                    <div class="characters-text-box">
+                        <div class="characters-text">
+                            <div class="character-name">
+                                <h3>마법사 고양이</h3>
+                                <h1>미스토펠리스</h1>
+                            </div>
+                            <p>
+                                마법사의 혈통이지만 마법의 힘을 완전히 통제할 수 없는 어린 젤리클 고양이.
+                                <br>
+                                꾸준하게 마법의 힘을 연구하고 있으며, 아직 자신의 능력에 자신감이 없다.
+                            </p>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <a href="https://open.spotify.com/album/36bEg6FTBaZGLg9ngJZIU6" target="_blank" class="sns">
-                        <img src="./img/sns/spotify.png" alt="">
-                    </a>
+                <li class="characters number5">
+                    <div class="characters-img"></div>
+                    <div class="characters-text-box">
+                        <div class="characters-text">
+                            <div class="character-name">
+                                <h1>럼텀터거</h1>
+                                <h3>반항아 고양이</h3>
+                            </div>
+                            <p>
+                                자기주관이 뚜렷하고 다른 고양이들의 관심 받기를 좋아한다.
+                                <br>
+                                항상 눈에 띄고 섹시한 말썽쟁이 바람둥이로, 암고양이들에게 인기가 많다.
+                            </p>
+                        </div>
+                    </div>
                 </li>
             </ul>
-        </div>
-    </footer>
+        </section>
+
+
+        <section class="gallery-container section" id="section5">
+            <div class="gallery-contants">
+                <div class="gallery-main">
+                    <img src="img/gallery_1.jpg" alt="Image 1" class="active">
+                    <img src="img/gallery_2.jpg" alt="Image 2">
+                    <img src="img/gallery_3.png" alt="Image 3" style="object-position: center 10%;">
+                    <img src="img/gallery_4.png" alt="Image 4" style="object-position: center 45%;">
+                    <img src="img/gallery_5.jpg" alt="Image 5" style="object-position: center 45%;">
+                </div>
+                <div class="button-container">
+                    <button class="arrow prev">
+                        <img src="./img/arrow.png" alt="">
+                    </button>
+                    <button class="arrow next">
+                        <img src="./img/arrow.png" alt="">
+                    </button>
+                </div>
+                <div class="thumbnails">
+                    <img src="img/gallery_1.jpg" alt="Thumbnail 1" class="thumb active" data-index="0">
+                    <img src="img/gallery_2.jpg" alt="Thumbnail 2" class="thumb" data-index="1">
+                    <img src="img/gallery_3.png" alt="Thumbnail 3" class="thumb" data-index="2">
+                    <img src="img/gallery_4.png" alt="Thumbnail 4" class="thumb" data-index="3">
+                    <img src="img/gallery_5.jpg" alt="Thumbnail 5" class="thumb" data-index="4">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="soundtrack-container section" id="section6">
+            <div class="soundtrack-contants">
+                <div class="soundtrack front">
+                    <img src="./img/soundtrack_front.png" alt="">
+                </div>
+                <div class="soundtrack back">
+                    <img src="./img/soundtrack_back.png" alt="">
+                    <div class="sound-button">
+                        <button class="sound-prev"></button>
+                        <button class="sound-play"></button>
+                        <button class="sound-stop"></button>
+                        <button class="sound-next"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="reservation-container section" id="section7">
+            <div class="reservation-contants">
+                <div class="r-contant">
+                    <h1>
+                        앤드류 로이드 웨버의 기록을 깬 뮤지컬 CATS.
+                    </h1>
+                    <p>
+                        토머스 스턴스 엘리엇의 연작시인 &lt;지혜로운 고양이가 되기 위한 지침서(Old Possum`s Book of Practical Cats)&gt;을 각색하여 탄생한
+                        <br>
+                        이 &#39;혁신적인 뮤지컬&#39;은 음악과 댄스, 가사가 반짝이는 하모니로 여러분들의 눈과 귀를 즐겁게 해줄 겁니다.
+                    </p>
+                    <h3>
+                        &quot;시대를 초월한 음악, 화려한 세트, 훌륭한 출연진&quot;
+                    </h3>
+                    <p>
+                        숨 막히는 안무 그리고 잊을 수 없는 &#39;기억&#39;을 갖춘 CATS는 다른 어떤 뮤지컬과도 비교할 수 없는 마법과도 같은 뮤지컬입니다.
+                    </p>
+                    <h2>
+                        CATS가 다시 한번 여러분들에게 짜릿함을 선사하려 찾아옵니다.
+                    </h2>
+                    <div class="reservation">
+                        <a href="#" class="reservation-img">
+                            <img src="./img/reservation site.png" alt="">
+                        </a>
+                        <p>예매 사이트 바로가기</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer-container section" id="section8">
+            <div class="footer-contants">
+                <div class="footer-logo">
+                    <img src="img/Cats-Logo.png" alt="">
+                </div>
+                <ul class="sns-link">
+                    <li>
+                        <a href="https://www.facebook.com/CatstheMusical/" target="_blank" class="sns">
+                            <img src="./img/sns/facebook.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/catsmusical" target="_blank" class="sns">
+                            <img src="./img/sns/twitter.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/catsmusical/" target="_blank" class="sns">
+                            <img src="./img/sns/instagram.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/catsmusical" target="_blank" class="sns">
+                            <img src="./img/sns/youtube.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://open.spotify.com/album/36bEg6FTBaZGLg9ngJZIU6" target="_blank" class="sns">
+                            <img src="./img/sns/spotify.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+    
+    <script src="./script/gallery.js"></script>
+    <script src="./script/fullpage.js"></script>
+
 </body>
+
 </html>
