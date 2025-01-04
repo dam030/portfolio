@@ -40,12 +40,13 @@ function handleScroll(event) {
   if (window.innerWidth <= breakpoint) {
     return; // 화면 너비가 1024px 이하일 경우 자동 스크롤 처리
   }
-  if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
-    currentSectionIndex++;
-  } else if (event.deltaY < 0 && currentSectionIndex > 0) {
-    currentSectionIndex--;
-  }
-  moveToSection(currentSectionIndex);
+  if (event.deltaY > 0 && currentSectionIndex < sections.length - 1)
+    {
+      currentSectionIndex++;
+    } else if (event.deltaY < 0 && currentSectionIndex > 0) {
+      currentSectionIndex--;
+    }
+    moveToSection(currentSectionIndex);
 }
 
 // 풀페이지 스크롤 초기화
@@ -58,7 +59,6 @@ function initFullPageScroll() {
     window.removeEventListener('wheel', handleScroll); // 휠 이벤트 제거
   }
 }
-
 
 // 창 크기 변경 시 스크롤 방식 변경
 window.addEventListener('resize', initFullPageScroll);

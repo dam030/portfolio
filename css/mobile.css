@@ -1,20 +1,18 @@
-/* 데스크탑 화면 */
-@media (min-width: 1024px) {
+@media (max-width: 600px) {
     * {
         margin: 0;
         padding: 0;
     }
-
+    
     body {
         width: 100%;
         height: 100%;
         background-color: #000;
     }
-
+    
     img {
         display: block;
     }
-
 
 
     .delayed-element {
@@ -24,7 +22,7 @@
         transition: opacity 1s ease-out, transform 1s ease-out;
         /* opacity와 transform 속성에 애니메이션 적용 */
     }
-
+    
     /* 클래스를 추가하여 페이드 인 효과를 적용 */
     .delayed-element.visible {
       opacity: 1;
@@ -42,20 +40,20 @@
         top: 0;
         z-index: 1;
     }
-
+    
     .menu {
         display: flex;
         justify-content: center;
-
+    
         background-color: #000;
     }
-
+    
     .menu-contants {
         display: flex;
         justify-content: center;
         width: 1050px;
     }
-
+    
     .m_text {
         padding: 20px;  
         text-align: center;
@@ -66,10 +64,7 @@
     .page {
         font-weight: bolder;
     }
-
     /* 메뉴 끝 */
-
-
 
 
     /* 홈 시작 */
@@ -80,16 +75,17 @@
         position: relative;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .home-contents {
         width: 100%;
         height: 90%;
-
+    
         display: flex;
         justify-content: center;
     }
-
+    
     .home-img {
         width: 50%;
         display: flex;
@@ -97,34 +93,40 @@
         justify-content: center;
         align-items: center;
     }
-
+    
     .Cats-eyes {
         width: 70vw;
         margin-bottom: 100px;
     }
-
+    
     .Cats-Logo {
         width: 20vw;
     }
     /* 홈 끝 */
 
 
-
-
     /* 트레일러 시작 */
     .trailer-container {
         width: 100%;
         min-height: 100vh;
-    }
-
-    .trailer-contants {
-        width: 100%;
-        height: 100%;
 
         display: flex;
         justify-content: center;
+        align-items: center;
 
         position: relative;
+    }
+    
+    .trailer-contants {
+        width: 100%;
+        height: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        padding-top: 56.25%;
     }
 
     .trailer-contants > iframe {
@@ -132,6 +134,10 @@
         height: 100%;
         border: none;
         pointer-events: none;
+
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     .view-botton {
@@ -183,7 +189,7 @@
     }
 
     .synopsis-box {
-        width: 100%;
+        width: 90%;
         height: 700px;
 
         display: flex;
@@ -223,23 +229,20 @@
     /* 캐릭터 시작 */
     .characters-container {
         width: 100%;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 2000px;
     }
 
     .characters-contants {
-        width: 90%;
+        width: 100%;
         height: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
     }
 
     .characters {
-        width: 50%;
-        height: 500px;
+        width: 90%;
+        height: 100%;
 
         position: relative;
         margin: 10px;
@@ -249,85 +252,47 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.6s;
         overflow: hidden;
     }
 
     .characters:nth-child(1) {
         background: url(../img/characters/멍커스트랩.jpg);
-        background-position: center center;
+        background-position: center 10%;
     }
     .characters:nth-child(2) {
         background: url(../img/characters/올드듀터로노미.jpg);
-        background-position: 90% center;
+        background-position: 90% 10%;
     }
     .characters:nth-child(3) {
         background: url(../img/characters/그리자벨라.jpg);
-        background-position: 30% center;
+        background-position: 30% 10%;
     }
     .characters:nth-child(4) {
         background: url(../img/characters/미스토펠리스.jpg);
-        background-position: center center;
+        background-position: center 20%;
     }
     .characters:nth-child(5) {
         background: url(../img/characters/럼텀터거.jpg);
-        background-position: 53% center;
-    }
-
-    .characters:hover {
-        background-size: cover;
-        flex-shrink: 0;
-    }
-
-    .characters-img {
-        background-color: black;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 532px;
-        border-radius: 10px;
-        opacity: 0.5;
-    }
-
-    .characters:hover .characters-img {
-        opacity: 0;
+        background-position: 53% 20%;
     }
 
     .characters-text-box {
         width: 100%;
         height: 100%;
         position: relative;
-        opacity: 0;
-    }
-
-    .characters:hover .characters-text-box {
-        opacity: 1;
     }
 
     .characters-text{
         position: relative;
+        /* height: 100%; */
         color: #fff;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-    .characters-text > .character-name > h1 {
-        font-size: 80px;
-        font-weight: bolder;
-        margin-bottom: 10px;
-    }
-    .characters-text > .character-name > h3 {
-        font-size: 26px;
-        font-weight: bolder;
-    }
-    .characters-text > p {
-        line-height: 20px;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
 
 
     .number1 .characters-text-box > .characters-text > .character-name {
         position: absolute;
-        top: 390px;
+        bottom: 0;
     }
     .number1 .characters-text-box > .characters-text > P {
         text-align: right;
@@ -344,7 +309,23 @@
         text-align: right;
         bottom: 0;
     }
-    .number3 .characters-text-box > .characters-text > .character-name {
+    .numberers-text{
+        position: relative;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    .characters-text > .character-name > h1 {
+        font-size: 80px;
+        font-weight: bolder;
+        margin-bottom: 10px;
+    }
+    .characters-text > .character-name > h3 {
+        font-size: 26px;
+        font-weight: bolder;
+    }
+    .characters-text > p {
+        line-height: 20px;
+        text-sh3 .characters-text-box > .characters-text > .character-name {
         width: 100%;
         position: absolute;
         bottom: 390px;
@@ -381,7 +362,7 @@
 
     .gallery-contants {
         width: 100%;
-        height: 100%;
+        height: 97%;
 
         position: relative;
         display: flex;
@@ -476,7 +457,7 @@
     .soundtrack-contants {
         position: relative;
         width: 750px;
-        height: 100%;
+        min-height: 100vh;
 
         display: flex;
         justify-content: center;
@@ -491,7 +472,7 @@
     }
 
     .soundtrack-contants > .front {
-        top: 8%;
+        top: 5%;
         left: 0;
         transform: rotate(-4deg);
     }
@@ -609,6 +590,7 @@
 
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .footer-contants {
