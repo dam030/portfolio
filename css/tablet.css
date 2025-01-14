@@ -48,6 +48,10 @@
     
         background-color: #000;
     }
+
+    .mobile-only {
+        display: none;
+    }
     
     .menu-contants {
         display: flex;

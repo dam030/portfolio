@@ -35,25 +35,48 @@
     /* 메뉴 시작 */
     .menu-container {
         width: 100%;
-        height: 40px;
+        min-height: 100vh;
         position: fixed;
         top: 0;
         z-index: 1000;
+        left: -1000px;
     }
     
     .menu {
+        width: 100%;
+        min-height: 100vh;
+        
+        position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     
         background-color: #000;
     }
-    
-    .menu-contants {
+
+    .mobile-only {
+        opacity: 1;
+        position: relative;
         display: flex;
         justify-content: center;
-        width: 1050px;
+        align-items: center;
     }
     
+    .menu-logo {
+        position: relative;
+        width: 100px;
+        margin-bottom: 50px;
+    }
+    
+    .menu-contants {
+        height: 400px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .m_text {
         padding: 20px;  
         text-align: center;
@@ -486,8 +509,6 @@
 
     .soundtrack-contants {
         position: relative;
-        width: 750px;
-        min-height: 100vh;
 
         display: flex;
         justify-content: center;
@@ -502,13 +523,15 @@
     }
 
     .soundtrack-contants > .front {
+        height: 620px;
         top: 5%;
         left: 0;
         transform: rotate(-4deg);
     }
 
     .soundtrack-contants > .back {
-        bottom: 5%;
+        height: 620px;
+        bottom: 0%;
         right: 0;
         transform: rotate(5deg);
 
@@ -517,7 +540,7 @@
     }
 
     .soundtrack > img {
-        height: 750px;
+        height: 600px;
     }
 
     .sound-button {
