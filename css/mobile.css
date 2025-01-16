@@ -32,14 +32,88 @@
 
 
 
+    .mobile-only {
+        display: block;
+        opacity: 1;
+    }
+
+    .title {
+        color: #fff;
+        position: absolute;
+        font-size: 26px;
+        font-weight: 100;
+    }
+
+
+
+    /* 햄버거 시작 */
+    .ham_container {
+        position: fixed;
+        top: 24px;
+        right: 5%;
+        cursor: pointer;
+        transition: 0.5s;
+        z-index: 999;
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: relative;
+        margin: 16px 0;
+        transition: 0.5s;
+    }
+    
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        width: 30px;
+        height: 3px;
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        /* top: 10px; */
+        left: 0;
+        transition: 0.5s;
+    }
+    .hamburger::before {
+        top: -10px;
+    }
+    .hamburger::after {
+        top: 10px;
+    }
+
+    .hamburger.active {
+        background-color: transparent;
+    }
+
+    .hamburger.active::before,
+    .hamburger.active::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .hamburger.active::after {
+        transform: rotate(45deg);
+    }
+    /* 햄버거 끝 */
+
+
+
     /* 메뉴 시작 */
     .menu-container {
-        width: 100%;
+        width: 55%;
         min-height: 100vh;
         position: fixed;
         top: 0;
-        z-index: 1000;
-        left: -1000px;
+        z-index: 100;
+        right: -100%;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .menu-container.active {
+        right: 0; /* 메뉴를 화면으로 이동 */
     }
     
     .menu {
@@ -52,16 +126,9 @@
         justify-content: center;
         align-items: center;
     
-        background-color: #000;
+        background-color: #121212;
     }
-
-    .mobile-only {
-        opacity: 1;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
     
     .menu-logo {
         position: relative;
@@ -132,50 +199,20 @@
     .trailer-container {
         width: 100%;
         min-height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        position: relative;
-    }
-    
-    .trailer-contants {
-        width: 100%;
-        height: 100%;
         
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
         position: relative;
-        padding-top: 56.25%;
     }
-
-    .trailer-contants > iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        pointer-events: none;
-
-        position: absolute;
-        top: 0;
-        left: 0;
+    
+    .trailer-container .title {
+        top: 15%;
     }
 
     .view-botton {
-        display: flex;
-        border: #FFEF00 solid 5px;
-        position: absolute;
-        bottom: 10%;
-    }
-
-    .view-botton > a {
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bolder;
-        color: #FFEF00;
+        bottom: -30%;
     }
     /* 트레일러 끝 */
 
@@ -190,59 +227,21 @@
         position: relative;
     }
 
-    .synopsis-contants {
-        width: 100%;
-        height: 100%;
-
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .synopsis-container .title {
+        top: 15%;
+        left: 50%;
+        translateZ: 50%;
     }
 
     .synopsis-back-img {
-        width: 100%;
-        height: 700px;
-
-        position: absolute;
-
-        background-image: url('/img/background_1.jpg');
-        background-size: cover;
-        background-attachment: fixed;
+        top: 23%;
+        height: 500px;
     }
 
     .synopsis-box {
-        width: 90%;
-        height: 700px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        position: relative;
-
-        text-align: center;
-        color: #fff;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        z-index: 2;
-    }
-
-    .synopsis-logo {
-        width: 170px;
-        padding-bottom: 50px;
-    }
-
-    .synopsis-text > h2 {
-        font-size: 30px;
-        line-height: 40px;
-        margin-bottom: 30px;
-    }
-
-    .synopsis-text > p {
-        font-size: 18px;
-        line-height: 24px;
-        color: #FFEF00;
+        /* position: absolute;
+        top: 23%; */
+        /* 여기에 앱솔루트를 주면 왜 다 어그러질까? */
     }
     /* 시놉시스 끝 */
 
@@ -516,9 +515,6 @@
     }
 
     .soundtrack {
-        height: 750px;
-        width: 375px;
-
         position: absolute;
     }
 
@@ -543,17 +539,8 @@
         height: 600px;
     }
 
-    .sound-button {
-        width: 75%;
+    .soundtrack-box {
         position: absolute;
-        display: flex;
-        justify-content: space-between;
-        bottom: 5%;
-    }
-
-    .sound-button > button {
-        width: 50px;
-        height: 50px;
     }
     /* 사운드트랙 끝 */
 

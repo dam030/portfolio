@@ -34,6 +34,12 @@
 
 
 
+    .mobile-only {
+        display: none;
+    }
+
+
+
     /* 메뉴 시작 */
     .menu-container {
         width: 100%;
@@ -48,10 +54,6 @@
         justify-content: center;
 
         background-color: #000;
-    }
-
-    .mobile-only {
-        display: none;
     }
 
     .menu-contants {
@@ -503,9 +505,9 @@
     }
 
     .soundtrack-contants > .back {
-        /* bottom: 5%;
+        bottom: 5%;
         right: 0;
-        transform: rotate(5deg); */
+        transform: rotate(5deg);
 
         display: flex;
         justify-content: center;
@@ -515,29 +517,48 @@
         height: 750px;
     }
 
+    .soundtrack-box {
+        width: 100%;
+        height: 600px;
+
+        position: absolute;
+        left: 7%;
+        top: 15%;
+
+        color: #fff;
+    }
+
     .soundtrack-playlist {
         width: 100%;
         height: 530px;
         
-        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        left: 7%;
-        top: 15%;
-        color: #fff;
+        
     }
 
     .sound-button {
         position: absolute;
-        display: flex;
-        justify-content: space-between;
-        bottom: 5.5%;
-        left: 13%;
+        bottom: 3px;
+        left: 21px;
     }
 
     .sound-button > a > img {
         height: 40px;
+    }
+
+    .soundtrack-text {
+        position: absolute;
+        left: 82px;
+        bottom: 0;
+    }
+    .soundtrack-text h1 {
+        font-size: 44px;
+        font-weight: bolder;
+    }
+    .soundtrack-text p {
+        font-size: 10px;
     }
     /* 사운드트랙 끝 */
 

@@ -33,6 +33,12 @@
 
 
 
+    .mobile-only {
+        display: none;
+    }
+
+
+
     /* 메뉴 시작 */
     .menu-container {
         width: 100%;
