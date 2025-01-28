@@ -1,80 +1,6 @@
 /* 태블릿릿 화면 */
 @media (max-width: 1024px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
-    body {
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-    }
-    
-    img {
-        display: block;
-    }
-
-
-    .delayed-element {
-        opacity: 0;
-        transform: translateY(20px); 
-        /* 이미지가 처음에는 살짝 아래로 위치하게 */
-        transition: opacity 1s ease-out, transform 1s ease-out;
-        /* opacity와 transform 속성에 애니메이션 적용 */
-    }
-    
-    /* 클래스를 추가하여 페이드 인 효과를 적용 */
-    .delayed-element.visible {
-      opacity: 1;
-      transform: translateY(0);
-      /* 이미지가 자연스럽게 올라오며 보이도록 */
-    }
-
-
-
-    .mobile-only {
-        display: none;
-    }
-
-
-
     /* 메뉴 시작 */
-    .menu-container {
-        width: 100%;
-        height: 40px;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    .menu {
-        display: flex;
-        justify-content: center;
-    
-        background-color: #000;
-    }
-
-    .mobile-only {
-        display: none;
-    }
-    
-    .menu-contants {
-        display: flex;
-        justify-content: center;
-        width: 1050px;
-    }
-    
-    .m_text {
-        padding: 20px;  
-        text-align: center;
-        line-height: 40px;
-        text-decoration: none;
-        color: #FFEF00;
-    }
-    .page {
-        font-weight: bolder;
-    }
     /* 메뉴 끝 */
 
 
@@ -87,31 +13,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .home-contents {
-        width: 100%;
-        height: 90%;
-    
-        display: flex;
-        justify-content: center;
-    }
-    
-    .home-img {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .Cats-eyes {
-        width: 70vw;
-        margin-bottom: 100px;
-    }
-    
-    .Cats-Logo {
-        width: 20vw;
     }
     /* 홈 끝 */
 
@@ -150,87 +51,20 @@
         top: 0;
         left: 0;
     }
-
-    .view-botton {
-        display: flex;
-        border: #FFEF00 solid 5px;
-        position: absolute;
-        bottom: 10%;
-    }
-
-    .view-botton > a {
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bolder;
-        color: #FFEF00;
-    }
     /* 트레일러 끝 */
 
 
 
 
     /* 시놉시스 시작 */
-    .synopsis-container {
-        width: 100%;
-        min-height: 100vh;
-
-        position: relative;
-    }
-
     .synopsis-contants {
         width: 100%;
-        height: 100%;
+        height: 100vh;
 
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .synopsis-back-img {
-        width: 100%;
-        height: 700px;
-
-        position: absolute;
-
-        background-image: url('/img/background_1.jpg');
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    .synopsis-box {
-        width: 100%;
-        height: 700px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        position: relative;
-
-        text-align: center;
-        color: #fff;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        z-index: 2;
-    }
-
-    .synopsis-logo {
-        width: 170px;
-        padding-bottom: 50px;
-    }
-
-    .synopsis-text > h2 {
-        font-size: 30px;
-        line-height: 40px;
-        margin-bottom: 30px;
-    }
-
-    .synopsis-text > p {
-        font-size: 18px;
-        line-height: 24px;
-        color: #FFEF00;
     }
     /* 시놉시스 끝 */
 
@@ -238,439 +72,29 @@
 
 
     /* 캐릭터 시작 */
-    .characters-container {
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .characters-contants {
-        width: 90%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .characters {
-        width: 50%;
-        height: 500px;
-
-        position: relative;
-        margin: 10px;
-        padding: 16px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: 0.6s;
-        overflow: hidden;
-    }
-
-    .characters:nth-child(1) {
-        background: url(../img/characters/멍커스트랩.jpg);
-        background-position: center center;
-    }
-    .characters:nth-child(2) {
-        background: url(../img/characters/올드듀터로노미.jpg);
-        background-position: 90% center;
-    }
-    .characters:nth-child(3) {
-        background: url(../img/characters/그리자벨라.jpg);
-        background-position: 30% center;
-    }
-    .characters:nth-child(4) {
-        background: url(../img/characters/미스토펠리스.jpg);
-        background-position: center center;
-    }
-    .characters:nth-child(5) {
-        background: url(../img/characters/럼텀터거.jpg);
-        background-position: 53% center;
-    }
-
-    .characters:hover {
-        background-size: cover;
-        flex-shrink: 0;
-    }
-
-    .characters-img {
-        background-color: black;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 532px;
-        border-radius: 10px;
-        opacity: 0.5;
-    }
-
-    .characters:hover .characters-img {
-        opacity: 0;
-    }
-
-    .characters-text-box {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        opacity: 0;
-    }
-
-    .characters:hover .characters-text-box {
-        opacity: 1;
-    }
-
-    .characters-text{
-        position: relative;
-        color: #fff;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-    .characters-text > .character-name > h1 {
-        font-size: 80px;
-        font-weight: bolder;
-        margin-bottom: 10px;
-    }
-    .characters-text > .character-name > h3 {
-        font-size: 26px;
-        font-weight: bolder;
-    }
-    .characters-text > p {
-        line-height: 20px;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    }
-
-
-    .number1 .characters-text-box > .characters-text > .character-name {
-        position: absolute;
-        top: 390px;
-    }
-    .number1 .characters-text-box > .characters-text > P {
-        text-align: right;
-    }
-
-    .number2 .characters-text-box > .characters-text {
-        position: absolute;
-        bottom: 0;
-    }
-
-    .number3 .characters-text-box > .characters-text {
-        width: 100%;
-        position: absolute;
-        text-align: right;
-        bottom: 0;
-    }
-    .number3 .characters-text-box > .characters-text > .character-name {
-        width: 100%;
-        position: absolute;
-        bottom: 390px;
-    }
-
-    .number4 .characters-text-box > .characters-text {
-        width: 100%;
-        position: absolute;
-        text-align: right;
-        bottom: 0;
-    }
-
-    .number5 .characters-text-box > .characters-text {
-        width: 100%;
-        position: absolute;
-        text-align: right;
-        bottom: 0;
-    }
-    .number5 .characters-text-box > .characters-text > .character-name {
-        position: absolute;
-        text-align: left;
-        bottom: 390px;
-    }
     /* 캐릭터 끝 */
 
 
 
 
     /* 갤러리 시작 */
-    .gallery-container {
-        width: 100%;
-        min-height: 100vh;
-    }
-
-    .gallery-contants {
-        width: 100%;
-        height: 97%;
-
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .gallery-main img {
-        width: 100%;
-        height: 700px;
-
-        display: none;
-        object-fit: cover;
-        margin-bottom: 20px;
-    }
-    .gallery-main img.active {
-        display: block;
-    }
-
-    .button-container {
-        width: 100%;
-        position: absolute;
-        top: 40%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .arrow {
-        position: absolute;
-        border: none;
-        background-color: rgba(0, 0, 0, 0);
-        color: #000;
-        cursor: pointer;
-        z-index: 10;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s;    
-    }
-    .arrow img {
-        width: 30px;
-        height: 60px;
-    }
-    .arrow.prev {
-        transform: rotate(180deg);
-        left: 20px;
-    }
-    .arrow.next {
-        right: 20px;
-    }
-
-    .thumbnails {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .thumbnails img {
-        width: 100px;
-        height: 80px;
-        object-fit: cover;
-        margin: 0 5px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: 0.2s;
-        border: 2px solid transparent;
-    }
-    .thumbnails img.active {
-        transform: scale(1.1);
-        border: 2px solid #fff;
-        opacity: 1;
-    }
-    .thumbnails img:hover {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
     /* 갤러리 끝 */
 
 
 
 
     /* 사운드트랙 시작 */
-    .soundtrack-container {
-        width: 100%;
-        min-height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        background-color: aquamarine;
-    }
-
-    .soundtrack-contants {
-        position: relative;
-        width: 750px;
-        min-height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .soundtrack {
-        height: 750px;
-        width: 375px;
-
-        position: absolute;
-    }
-
-    .soundtrack-contants > .front {
-        top: 5%;
-        left: 0;
-        transform: rotate(-4deg);
-    }
-
-    .soundtrack-contants > .back {
-        bottom: 5%;
-        right: 0;
-        transform: rotate(5deg);
-
-        display: flex;
-        justify-content: center;
-    }
-
-    .soundtrack > img {
-        height: 750px;
-    }
-
-    .sound-button {
-        width: 75%;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        bottom: 5%;
-    }
-
-    .sound-button > button {
-        width: 50px;
-        height: 50px;
-    }
     /* 사운드트랙 끝 */
 
 
 
 
     /* 예약 시작 */
-    .reservation-container {
-        width: 100%;
-        min-height: 100vh;
-
-        display: flex;
-        align-items: center;
-    }
-
-    .reservation-contants {
-        width: 100%;
-        height: 700px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url('/img/background_2.jpg');
-    }
-
-    .r-contant {
-        width: 100%;
-        height: 80%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-
-        color: #fff;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    .r-contant > h1 {
-        font-size: 46px;
-        line-height: 55px;
-        font-weight: bolder;
-    }
-
-    .r-contant > h2 {
-        font-size: 32px;
-        line-height: 40px;
-        font-weight: bolder;
-    }
-
-    .r-contant > h3 {
-        font-size: 28px;
-        line-height: 32px;
-    }
-
-    .r-contant > p {
-        font-size: 15px;
-        line-height: 20px;
-    }
-
-    .reservation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .reservation-img > img {
-        width: 250px;
-        /* border-radius: 5px; */
-        padding: 10px;
-    }
-
-    .reservation > p {
-        font-size: 12px;
-        color: rgb(172, 172, 172);
-    }
     /* 예약 끝 */
 
 
 
 
     /* 푸터 시작 */
-    .footer-container {
-        width: 100%;
-        min-height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-contants {
-        width: 50%;
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-logo {
-        margin-bottom: 20px;
-    }
-
-    .footer-logo > img {
-        width: 300px;
-    }
-
-    .sns-link {
-        width: 350px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .sns-link > li {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sns > img{
-        height: 60px;
-        position: relative;
-    }
-
-    .sns-link :nth-child(2) > a > img {
-        height: 50px;
-    }
-    .sns-link :nth-last-child(1) > a > img {
-        height: 50px;
-    }
     /* 푸터 끝 */
 }
