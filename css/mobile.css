@@ -40,6 +40,7 @@
     .title {
         color: #fff;
         position: absolute;
+        top: 10%;
         font-size: 26px;
         font-weight: 100;
     }
@@ -108,7 +109,7 @@
         position: fixed;
         top: 0;
         z-index: 100;
-        right: -100%;
+        right: -200%;
         transition: right 0.3s ease-in-out;
     }
 
@@ -206,10 +207,6 @@
         
         position: relative;
     }
-    
-    .trailer-container .title {
-        top: 15%;
-    }
 
     .view-botton {
         bottom: -30%;
@@ -225,23 +222,14 @@
         min-height: 100vh;
 
         position: relative;
-    }
 
-    .synopsis-container .title {
-        top: 15%;
-        left: 50%;
-        translateZ: 50%;
+        display: flex;
+        justify-content: center;
     }
 
     .synopsis-back-img {
         top: 23%;
         height: 500px;
-    }
-
-    .synopsis-box {
-        /* position: absolute;
-        top: 23%; */
-        /* 여기에 앱솔루트를 주면 왜 다 어그러질까? */
     }
     /* 시놉시스 끝 */
 
@@ -251,10 +239,21 @@
     /* 캐릭터 시작 */
     .characters-container {
         width: 100%;
-        height: 2000px;
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
+        height: 3000px;
+
+        position: relative;
+    }
+    .characters-container .delayed-element {
+        opacity: 1;
+        transform: none; 
+        transition: none;
+    }
+    .characters-container .delayed-element.visible {
+        opacity: 1;
+        transform: none;
+    }
+    .characters-container .title {
+        top: 5%;
     }
 
     .characters-contants {
@@ -267,20 +266,9 @@
 
     .characters {
         width: 90%;
-        height: 100%;
-
-        position: relative;
-        margin: 10px;
-        padding: 16px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        height: 450px;
+        
         transition: 0;
-        overflow: hidden;
-
-        background-color: unset;
     }
 
     .characters:nth-child(1) {
@@ -305,8 +293,8 @@
     }
 
     .characters:hover {
-        background-color: unset;
-        pointer-events: none;
+        background-size: initial;
+        flex-shrink: 1;
     }
 
     .characters-img {
@@ -320,53 +308,39 @@
         opacity: 0;
     }
 
-    .characters:hover .characters-img {
-        background-color: unset;
-        pointer-events: none;
-    }
-
     .characters-text-box {
         width: 100%;
-        height: 100%;
+        height: 450px;
         position: relative;
         opacity: 1;
-    }
-
-    .characters:hover .characters-text-box {
-        background-color: unset;
-        opacity: 1;
-        pointer-events: none;
     }
 
     .characters-text{
-        position: relative;
-        color: #fff;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        height: 450px;
     }
+
     .characters-text > .character-name > h1 {
-        font-size: 80px;
+        font-size: 62px;
         font-weight: bolder;
-        margin-bottom: 10px;
     }
     .characters-text > .character-name > h3 {
-        font-size: 26px;
+        font-size: 20px;
         font-weight: bolder;
     }
     .characters-text > p {
-        line-height: 20px;
+        line-height: 16px;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
 
-
     .number1 .characters-text-box > .characters-text > .character-name {
         position: absolute;
-        top: 390px;
+        bottom: 0;
     }
     .number1 .characters-text-box > .characters-text > P {
         text-align: right;
     }
 
-    .number2 .characters-text-box > .characters-text {
+    .number2 .characters-text-box > .characters-text > p {
         position: absolute;
         bottom: 0;
     }
@@ -380,10 +354,16 @@
     .number3 .characters-text-box > .characters-text > .character-name {
         width: 100%;
         position: absolute;
-        bottom: 390px;
+        bottom: 0;
     }
 
-    .number4 .characters-text-box > .characters-text {
+    .number4 .characters-text-box > .characters-text > .character-name {
+        width: 100%;
+        position: absolute;
+        text-align: right;
+        bottom: 70px;
+    }
+    .number4 .characters-text-box > .characters-text > p {
         width: 100%;
         position: absolute;
         text-align: right;
@@ -399,7 +379,7 @@
     .number5 .characters-text-box > .characters-text > .character-name {
         position: absolute;
         text-align: left;
-        bottom: 390px;
+        bottom: 0;
     }
     /* 캐릭터 끝 */
 
@@ -410,7 +390,23 @@
     .gallery-container {
         width: 100%;
         min-height: 100vh;
+
+        position: relative;
+
+        display: flex;
+        justify-content: center;
     }
+
+    .gallery-contants{
+        position: absolute;
+        top: 5%;
+    }
+
+    .gallery-main img {
+        width: 100%;
+        height: 500px;
+    }
+
     .thumbnails img.active {
         transform: scale(1);
         border: 2px solid #fff;
@@ -431,10 +427,15 @@
     }
 
     .soundtrack-contants > .front {
-        top: 5%;
+        top: 15%;
+        left: 10%;
+        /* transform: rotate(0deg); */
     }
     .soundtrack-contants > .back {
-        bottom: 5%;
+        height: 650px;
+        right: 5%;
+        
+        /* transform: rotate(0deg); */
     }
 
     .soundtrack > img {
@@ -442,10 +443,11 @@
     }
 
     .soundtrack-box{
+        width: 300px;
         height: 530px;
 
         left: 12%;
-        top: 12%;
+        top: 14%;
     }
 
     .soundtrack-playlist {
@@ -471,6 +473,14 @@
     /* 예약 시작 */
     .reservation-container {
         min-height: 100vh;
+    }
+    .reservation-container .title {
+        top: 7%;
+    }
+
+    .reservation-contants {
+        position: absolute;
+        bottom: 8%;
     }
 
     .r-contant > h1 {
