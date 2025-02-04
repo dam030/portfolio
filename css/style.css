@@ -608,6 +608,7 @@ img {
     justify-content: center;
 
     background-image: url('/img/background_2.jpg');
+    background-position: center center;
 }
 
 .r-contant {
