@@ -72,6 +72,17 @@
 
 
     /* 캐릭터 시작 */
+    .number2 .characters-text-box > .characters-text {
+        height: 260px;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .number4 .characters-text-box > .characters-text {
+        height: 280px;
+        position: absolute;
+        bottom: 0;
+    }
     /* 캐릭터 끝 */
 
 
