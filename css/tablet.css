@@ -1,6 +1,18 @@
 /* 태블릿릿 화면 */
 @media (min-width: 601px) and (max-width:1023px) {
     /* 메뉴 시작 */
+    .menu {
+        width: fit-content;
+    }
+
+    .menu-contants {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .m_text {
+        padding: 5px;
+    }
     /* 메뉴 끝 */
 
 
@@ -8,16 +20,26 @@
     .home-container {
         width: 100%;
         min-height: 100vh;
-
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     /* 홈 끝 */
 
 
     /* 트레일러 시작 */
+    .trailer-container {
+        min-height: 100vh;
+    }
+
+    .trailer-contants {
+        width: 100%;
+        height: fit-content;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+        padding-top: 56.25%;
+    }
     /* 트레일러 끝 */
 
 
@@ -26,12 +48,7 @@
     /* 시놉시스 시작 */
     .synopsis-contants {
         width: 100%;
-        height: 100vh;
-
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        min-height: 100vh;
     }
     /* 시놉시스 끝 */
 
@@ -39,6 +56,14 @@
 
 
     /* 캐릭터 시작 */
+    .character-container {
+        min-height: 100vh;
+    }
+
+    .characters-contants {
+        width: 95%;
+    }
+    
     .characters-text > .character-name > h1 {
         font-size: 60px;
         font-weight: bolder;
@@ -71,18 +96,59 @@
 
 
     /* 갤러리 시작 */
+    .gallery-container {
+        min-height: 100vh;
+    }
     /* 갤러리 끝 */
 
 
 
 
     /* 사운드트랙 시작 */
-    .soundtrack-container {
-        min-height: 100vh;
+    .soundtrack-contants {
+        height: 700px;
     }
 
-    .soundtrack-contants {
-        min-height: 100vh;
+    .soundtrack-contants > .front {
+        top: 0;
+        left: 10%;
+    }
+    .soundtrack-contants > .back {
+        bottom: 0;
+        right: 10%;
+    }
+    .soundtrack > img {
+        height: 600px;
+    }
+
+    .soundtrack-box {
+        height: 493px;
+        left: 5%;
+        top: 80px;
+    }
+    .soundtrack-playlist {
+        width: 90%;
+        height: 445px;
+    }
+    .soundtrack-playlist p {
+        font-size: 14px;
+    }
+    .sound-button {
+        bottom: -5px;
+        left: 5px;
+    }
+    .sound-button > a > img {
+        height: 50px;
+    }
+    .soundtrack-text {
+        left: 70px;
+        bottom: 0;
+    }
+    .soundtrack-text h1 {
+        font-size: 40px;
+    }
+    .soundtrack-text p {
+        font-size: 9px;
     }
     /* 사운드트랙 끝 */
 
@@ -90,11 +156,17 @@
 
 
     /* 예약 시작 */
+    .reservation-container {
+        min-height: 100vh;
+    }
     /* 예약 끝 */
 
 
 
 
     /* 푸터 시작 */
+    .footer-container {
+        min-height: 100vh;
+    }
     /* 푸터 끝 */
 }

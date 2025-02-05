@@ -40,7 +40,7 @@
     .title {
         color: #fff;
         position: absolute;
-        top: 10%;
+        top: 15%;
         font-size: 26px;
         font-weight: 100;
     }
@@ -50,7 +50,7 @@
     /* 햄버거 시작 */
     .ham_container {
         position: fixed;
-        top: 24px;
+        top: 10%;
         right: 5%;
         cursor: pointer;
         transition: 0.5s;
@@ -111,34 +111,41 @@
         z-index: 100;
         right: -200%;
         transition: right 0.3s ease-in-out;
+        background-color: transparent;
     }
-
     .menu-container.active {
         right: 0; /* 메뉴를 화면으로 이동 */
+    }
+
+    .menu-box {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        background-color: #0c0c0c;
+        opacity: 85%;
     }
     
     .menu {
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
         
         position: relative;
+
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-    
-        background-color: #121212;
     }
     
     
     .menu-logo {
         position: relative;
         width: 100px;
-        margin-bottom: 50px;
+        /* margin-bottom: 20%; */
     }
     
     .menu-contants {
-        height: 400px;
+        height: 300px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -187,11 +194,11 @@
     
     .Cats-eyes {
         width: 70vw;
-        margin-bottom: 100px;
+        margin-bottom: 30%;
     }
     
     .Cats-Logo {
-        width: 20vw;
+        width: 25vw;
     }
     /* 홈 끝 */
 
@@ -201,8 +208,20 @@
         min-height: 100vh;
     }
 
+    .trailer-contants {
+        width: 100%;
+        height: fit-content;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+        padding-top: 56.25%;
+    }
+
     .view-botton {
-        bottom: -30%;
+        bottom: -35%;
     }
     /* 트레일러 끝 */
 
@@ -211,26 +230,32 @@
 
     /* 시놉시스 시작 */
     .synopsis-container {
-        width: 100%;
         min-height: 100vh;
-
-        position: relative;
-
+        
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+    .synopsis-container > .title {
+        top: 7%;
     }
 
     .synopsis-back-img {
-        top: 23%;
-        height: 500px;
-        background-position: center center;
+        height: 450px;
+    }
+
+    .synopsis-box {
+        height: fit-content;
+    }
+    .synopsis-box img {
+        width: 120px;
     }
 
     .synopsis-text > h2 {
-        font-size: 26px;
-        line-height: 32px;
+        font-size: 24px;
+        line-height: 30px;
     
-        margin-bottom: 30px;
+        margin-bottom: 3%;
     }
     
     .synopsis-text > p {
@@ -246,7 +271,7 @@
     /* 캐릭터 시작 */
     .characters-container {
         width: 100%;
-        height: 2000px;
+        height: 1850px;
 
         position: relative;
     }
@@ -266,43 +291,22 @@
     .characters-contants {
         width: 100%;
         height: 100%;
-        /* position: absolute;
-        bottom: 0; */
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
     }
 
     .characters {
-        width: 90%;
+        width: 85%;
         height: 300px;
+
+        padding: 10px;
         
         transition: 0;
     }
 
-    .characters:nth-child(1) {
-        background-image: url(../img/characters/멍커스트랩.jpg);
-        background-position: center 10%;
-        background-size: cover;
-    }
-    .characters:nth-child(2) {
-        background-image: url(../img/characters/올드듀터로노미.jpg);
-        background-position: 90% 10%;
-        background-size: cover;
-    }
-    .characters:nth-child(3) {
-        background-image: url(../img/characters/그리자벨라.jpg);
-        background-position: 30% 10%;
-        background-size: cover;
-    }
-    .characters:nth-child(4) {
-        background-image: url(../img/characters/미스토펠리스.jpg);
-        background-position: center 20%;
-        background-size: cover;
-    }
-    .characters:nth-child(5) {
-        background-image: url(../img/characters/럼텀터거.jpg);
-        background-position: 53% 20%;
+    .characters:nth-child(n) {
         background-size: cover;
     }
 
@@ -312,19 +316,15 @@
     }
 
     .characters-img {
-        background-color: none;
+        /* background-color: none; */
         width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 532px;
-        border-radius: 10px;
+        height: 100%;
         opacity: 0;
     }
 
     .characters-text-box {
-        width: 100%;
-        height: 330px;
+        /* width: 100%;
+        height: 100%; */
         position: relative;
         opacity: 1;
     }
@@ -334,14 +334,16 @@
     }
 
     .characters-text > .character-name > h1 {
-        font-size: 62px;
+        font-size: 48px;
         font-weight: bolder;
+        margin-bottom: 0;
     }
     .characters-text > .character-name > h3 {
         font-size: 20px;
         font-weight: bolder;
     }
     .characters-text > p {
+        font-size: 14px;
         line-height: 16px;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
@@ -359,23 +361,32 @@
         position: absolute;
         bottom: 0;
     }
+    .number2 .characters-text-box > .characters-text > .character-name {
+        margin-bottom: 5px;
+    }
 
     .number3 .characters-text-box > .characters-text {
-        width: 100%;
-        position: absolute;
-        text-align: right;
+        height: fit-content;
         bottom: 0;
     }
     .number3 .characters-text-box > .characters-text > .character-name {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        margin-bottom: 5px;
+    }
+    .number3 .characters-text-box > .characters-text > .character-name > h1 {
+        margin-bottom: 5px;
     }
 
     .number4 .characters-text-box > .characters-text  {
         height: fit-content;
         position: absolute;
         text-align: right;
+    }
+    .number4 .characters-text-box > .characters-text > .character-name {
+        margin-bottom: 5px;
+    }
+    .number4 .characters-text-box > .characters-text > .character-name h1 {
+        letter-spacing: -3px;
     }
 
     .number5 .characters-text-box > .characters-text {
@@ -388,6 +399,9 @@
         position: absolute;
         text-align: left;
         bottom: 0;
+    }
+    .number5 .characters-text-box > .characters-text > .character-name > h1 {
+        margin-bottom: 5px;
     }
     /* 캐릭터 끝 */
 
@@ -404,25 +418,35 @@
         display: flex;
         justify-content: center;
     }
+    .gallery-container .title {
+        top: 7%;
+    }
 
     .gallery-contants{
+        height: fit-content;
+
         position: absolute;
-        top: 5%;
+        top: 15%;
+    }
+
+    .gallery-box {
+        height: 500px;
+        margin-bottom: 0;
     }
 
     .gallery-main img {
         width: 100%;
-        height: 500px;
+        height: 100%;
+
+        margin-bottom: 0px;
     }
 
-    .thumbnails img.active {
-        transform: scale(1);
-        border: 2px solid #fff;
-        opacity: 1;
+    .button-container {
+        width: 105%;
     }
-    .thumbnails img:hover {
-        transform: scale(1);
-        opacity: 1;
+
+    .thumbnails {
+        display: none;
     }
     /* 갤러리 끝 */
 
@@ -433,45 +457,58 @@
     .soundtrack-container {
         min-height: 100vh;
     }
-
-    .soundtrack {
-        position: relative;
+    .soundtrack-container .title {
+        top: 7%;
     }
+    .soundtrack-contants {
+        min-height: 100vh;
+    }
+    
     .soundtrack-contants > .front {
         display: none;
     }
     .soundtrack-contants > .back {
-        height: 650px;
-        bottom: -2%;
-        transform: rotate(5deg);
+        height: 500px;
+        top: 55%;
+        left: 48%;
+        transform: rotate(2deg) translate(-50%, -50%);
     }
 
     .soundtrack > img {
-        height: 650px;
+        height: 500px;
     }
 
     .soundtrack-box{
-        width: 300px;
-        height: 530px;
+        width: fit-content;
+        height: 420px;
 
-        left: 12%;
-        top: 14%;
+        left: 6%;
+        top: 65px;
     }
 
     .soundtrack-playlist {
-        width: 300px;
-        height: 470px;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        width: 220px;
+        height: 370px;
 
         font-size: 14px;
     }
 
+    .sound-button {
+        bottom: 2px;
+    }
+    .sound-button > a > img {
+        height: 45px;
+    }
+
+    .soundtrack-text {
+        left: 55px;
+        bottom: 7px;
+    }
     .soundtrack-text h1 {
-        font-size: 38px;
-        font-weight: bolder;
+        font-size: 32px;
+    }
+    .soundtrack-text p {
+        font-size: 8px;
     }
     /* 사운드트랙 끝 */
 
@@ -487,29 +524,36 @@
     }
 
     .reservation-contants {
+        height: 500px;
         position: absolute;
-        bottom: 8%;
+        bottom: 5%;
     }
 
+    .r-contant {
+        width: 90%;
+        height: 95%;
+    }
     .r-contant > h1 {
-        font-size: 38px;
-        line-height: 55px;
+        font-size: 28px;
+        line-height: 34px;
     }
-
     .r-contant > h2 {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 24px;
+        line-height: 30px;
         font-weight: bolder;
     }
-
     .r-contant > h3 {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .r-contant > p {
+        font-size: 12px;
+        line-height: 16px;
     }
 
-    .r-contant > p {
-        font-size: 16px;
-        line-height: 20px;
+    .reservation-img > img {
+        width: 150px;
+        padding: 5px;
     }
     /* 예약 끝 */
 
@@ -517,5 +561,34 @@
 
 
     /* 푸터 시작 */
+    .footer-container {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .footer-contants {
+        width: 90%;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+    .footer-logo img {
+        width: 75%;
+    }
+
+    .sns-link {
+        width: 270px;
+    }
+    .sns-link > li {
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    .sns > img{
+        width: 60px;
+        height: 40px;
+    }
     /* 푸터 끝 */
 }

@@ -42,22 +42,33 @@ img {
     width: 100%;
     height: 40px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+
     position: fixed;
     top: 0;
     z-index: 100;
 }
 
+.menu-box {
+    display: none;
+}
+
 .menu {
     display: flex;
     justify-content: center;
-    background-color: #000;
+    align-items: center;
+
 }
 
 .menu-contants {
+    width: 100%;
+
     display: flex;
     justify-content: center;
-
-    width: 1050px;
+    align-items: center;
 }
 
 .m_text {
@@ -84,6 +95,7 @@ img {
 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .home-contents {
@@ -95,8 +107,6 @@ img {
 }
 
 .home-img {
-    width: 50%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,6 +135,8 @@ img {
     align-items: center;
 
     position: relative;
+    
+    overflow: hidden;
 }
 
 .trailer-contants {
@@ -194,12 +206,11 @@ img {
     position: absolute;
 
     background-image: url('/img/background_1.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    background-position: center center;
 }
 
 .synopsis-box {
-    width: 100%;
+    width: 80%;
     height: 700px;
     
     display: flex;
@@ -217,7 +228,6 @@ img {
 
 .synopsis-logo {
     width: 170px;
-    padding-bottom: 50px;
 }
 
 .synopsis-text > h2 {
@@ -413,13 +423,36 @@ img {
     justify-content: center;
 }
 
-.gallery-main img {
+.gallery-box {
     width: 100%;
     height: 700px;
 
-    display: none;
-    object-fit: cover;
     margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.gallery-main {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+    display: none;
 }
 
 .gallery-main img.active {
@@ -427,29 +460,21 @@ img {
 }
 
 .button-container {
-    width: 100%;
-    height: 60px;
-
-    position: absolute;
-    top: 40%;
+    width: 99%;
+    height: fit-content;
 
     display: flex;
     justify-content: space-between;
+
+    position: absolute;
 }
 
 .arrow {
-    position: absolute;
-
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    color: #000;
 
     cursor: pointer;
     z-index: 10;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     transition: background-color 0.3s;    
 }
@@ -524,8 +549,8 @@ img {
 }
 
 .soundtrack {
-    height: 750px;
-    width: 375px;
+    height: fit-content;
+    width: fit-content;
 
     position: absolute;
 }
@@ -621,8 +646,8 @@ img {
 }
 
 .r-contant {
-    width: 100%;
-    height: 80%;
+    width: 80%;
+    height: 90%;
 
     display: flex;
     flex-direction: column;
@@ -669,7 +694,7 @@ img {
 
 .reservation > p {
     font-size: 12px;
-    color: rgb(172, 172, 172);
+    color: rgb(219 219 219);
 }
 /* 예약 끝 */
 
@@ -682,20 +707,17 @@ img {
 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .footer-contants {
     width: 50%;
-    height: 100%;
+    height: fit-content;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.footer-logo {
-    margin-bottom: 20px;
 }
 
 .footer-logo > img {

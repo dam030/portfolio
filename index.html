@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats</title>
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/tablet.css">
-    <link rel="stylesheet" href="/css/mobile.css">
-
     <style>
         @media (min-width: 1024px) {
             /* 데스크탑 */
@@ -43,6 +39,9 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tablet.css">
+    <link rel="stylesheet" href="/css/mobile.css">
 </head>
 
 <body>
@@ -50,6 +49,7 @@
         <div class="hamburger"></div>
     </div>
     <div class="menu-container">
+        <div class="menu-box"></div>
         <div class="menu">
             <div class="mobile-only">
                 <img src="./img/icon/logo.svg" alt="" class="menu-logo">
@@ -110,7 +110,8 @@
             <div class="trailer-contants">
                 <iframe
                     src="https://www.youtube.com/embed/3VptPGgs14Q?autoplay=1&mute=1&loop=1&playlist=3VptPGgs14Q&controls=0"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
                 <div class="view-botton delayed-element">
                     <a href="https://youtu.be/3VptPGgs14Q?si=LhZq04G7kkh7JwU4" target="_blank">VIEW MORE</a>
                 </div>
@@ -231,20 +232,22 @@
         <section class="gallery-container section" id="section5">
             <h1 class="mobile-only title">GALLERY</h1>
             <div class="gallery-contants">
-                <div class="gallery-main">
-                    <img src="img/gallery_1.jpg" alt="Image 1" class="active">
-                    <img src="img/gallery_2.jpg" alt="Image 2">
-                    <img src="img/gallery_3.png" alt="Image 3" style="object-position: center 10%;">
-                    <img src="img/gallery_4.png" alt="Image 4" style="object-position: center 45%;">
-                    <img src="img/gallery_5.jpg" alt="Image 5" style="object-position: center 45%;">
-                </div>
-                <div class="button-container">
-                    <button class="arrow prev">
-                        <img src="./img/icon/arrow.svg" alt="">
-                    </button>
-                    <button class="arrow next">
-                        <img src="./img/icon/arrow.svg" alt="">
-                    </button>
+                <div class="gallery-box">
+                    <div class="gallery-main">
+                        <img src="img/gallery_1.jpg" alt="Image 1" class="active">
+                        <img src="img/gallery_2.jpg" alt="Image 2">
+                        <img src="img/gallery_3.png" alt="Image 3" style="object-position: center 10%;">
+                        <img src="img/gallery_4.png" alt="Image 4" style="object-position: center 45%;">
+                        <img src="img/gallery_5.jpg" alt="Image 5" style="object-position: center 45%;">
+                    </div>
+                    <div class="button-container">
+                        <button class="arrow prev">
+                            <img src="./img/icon/arrow.svg" alt="">
+                        </button>
+                        <button class="arrow next">
+                            <img src="./img/icon/arrow.svg" alt="">
+                        </button>
+                    </div>
                 </div>
                 <div class="thumbnails">
                     <img src="img/gallery_1.jpg" alt="Thumbnail 1" class="thumb active" data-index="0">
@@ -424,27 +427,32 @@
         const hamContainer = document.querySelector('.ham_container');
         const menu = document.querySelector('.menu-container');
 
-        // hamContainer.addEventListener("click", () => {
-        //     hamburger.classList.toggle("active");
-        //     menu.classList.toggle("active");
-        //     hamContainer.classList.toggle("active");
-        //     // toggle : html요소의 특정 클래스를 추가하거나 제거한다. 해당 클래스가 이미 요소에 적용되어 있다면 제거하고 없다면 추가한다.
-        //     //토글은 두가지 상태만을 가지고 제어한다.
-        // });
+        let isMenuOpen = false;  // 메뉴가 열려 있지 않음을 기본으로 설정
+        hamContainer.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggleMenu();
+        });
 
-        let isMenuOpen = true;
-        hamContainer.addEventListener("click", () => {
-            if(isMenuOpen){
-                hamburger.classList.add("active");
-                menu.classList.add("active");
-                hamContainer.classList.add("active");
-            } else {
+        // 메뉴 외부 클릭 시 메뉴 닫기
+        document.addEventListener("click", (event) => {
+            if (isMenuOpen && !hamContainer.contains(event.target)) {
+                toggleMenu();
+            }
+        });
+
+        // 메뉴 열기/닫기
+        function toggleMenu() {
+            if (isMenuOpen) {
                 hamburger.classList.remove("active");
                 menu.classList.remove("active");
                 hamContainer.classList.remove("active");
+            } else {
+                hamburger.classList.add("active");
+                menu.classList.add("active");
+                hamContainer.classList.add("active");
             }
-            isMenuOpen = !isMenuOpen // 반전
-        });
+            isMenuOpen = !isMenuOpen; // 메뉴 상태 반전
+        }
     </script>
 
 </body>
