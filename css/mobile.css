@@ -198,14 +198,7 @@
 
     /* 트레일러 시작 */
     .trailer-container {
-        width: 100%;
         min-height: 100vh;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        position: relative;
     }
 
     .view-botton {
@@ -362,7 +355,7 @@
     }
 
     .number2 .characters-text-box > .characters-text {
-        height: 140px;
+        height: fit-content;
         position: absolute;
         bottom: 0;
     }
@@ -379,17 +372,10 @@
         bottom: 0;
     }
 
-    .number4 .characters-text-box > .characters-text > .character-name {
-        width: 100%;
+    .number4 .characters-text-box > .characters-text  {
+        height: fit-content;
         position: absolute;
         text-align: right;
-        bottom: 70px;
-    }
-    .number4 .characters-text-box > .characters-text > p {
-        width: 100%;
-        position: absolute;
-        text-align: right;
-        bottom: 0;
     }
 
     .number5 .characters-text-box > .characters-text {
@@ -457,7 +443,7 @@
     .soundtrack-contants > .back {
         height: 650px;
         bottom: -2%;
-        /* transform: rotate(0deg); */
+        transform: rotate(5deg);
     }
 
     .soundtrack > img {
