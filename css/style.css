@@ -307,8 +307,8 @@ img {
     background-position: 53% center;
 }
 .characters:hover {
-    /* background-size: cover;
-    flex-shrink: 0; */
+    background-size: cover;
+    flex-shrink: 0;
 }
 
 .characters-img {
