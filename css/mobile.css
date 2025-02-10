@@ -141,7 +141,6 @@
     .menu-logo {
         position: relative;
         width: 100px;
-        /* margin-bottom: 20%; */
     }
     
     .menu-contants {
@@ -153,7 +152,7 @@
     }
 
     .m_text {
-        padding: 20px;  
+        padding: 0 30px;  
         text-align: center;
         line-height: 40px;
         text-decoration: none;
@@ -235,9 +234,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        position: relative;
     }
-    .synopsis-container > .title {
+    /* .synopsis-container > .title {
         top: 7%;
+    } */
+
+    .synopsis-contants {
+        height: fit-content;
+
+        position: absolute;
+        bottom: 10%;
     }
 
     .synopsis-back-img {
@@ -418,9 +426,6 @@
         display: flex;
         justify-content: center;
     }
-    .gallery-container .title {
-        top: 7%;
-    }
 
     .gallery-contants{
         height: fit-content;
@@ -430,12 +435,12 @@
     }
 
     .gallery-box {
-        height: 500px;
+        height: 400px;
         margin-bottom: 0;
     }
 
     .gallery-main img {
-        width: 100%;
+        width: 400px;
         height: 100%;
 
         margin-bottom: 0px;

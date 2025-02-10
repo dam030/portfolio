@@ -11,7 +11,7 @@
     }
 
     .m_text {
-        padding: 5px;
+        padding: 20px 5px;
     }
     /* 메뉴 끝 */
 
@@ -39,6 +39,10 @@
     
         position: relative;
         padding-top: 56.25%;
+    }
+
+    .view-botton {
+        bottom: 5%;
     }
     /* 트레일러 끝 */
 
@@ -99,6 +103,14 @@
     .gallery-container {
         min-height: 100vh;
     }
+
+    .gallery-box {
+        height: 600px;
+    }
+
+    ..gallery-main img {
+        height: 600px;
+    }
     /* 갤러리 끝 */
 
 
@@ -122,12 +134,13 @@
     }
 
     .soundtrack-box {
+        width: fit-content;
         height: 493px;
         left: 5%;
         top: 80px;
     }
     .soundtrack-playlist {
-        width: 90%;
+        width: 270px;
         height: 445px;
     }
     .soundtrack-playlist p {

@@ -40,7 +40,7 @@ img {
 /* 메뉴 시작 */
 .menu-container {
     width: 100%;
-    height: 40px;
+    height: fit-content;
 
     display: flex;
     justify-content: center;
@@ -72,9 +72,9 @@ img {
 }
 
 .m_text {
+    display: block;
     padding: 20px;  
     text-align: center;
-    line-height: 40px;
     text-decoration: none;
     color: #FFEF00;
 }
@@ -114,12 +114,12 @@ img {
 }
 
 .Cats-eyes {
-    width: 70vw;
+    width: 60vw;
     margin-bottom: 100px;
 }
 
 .Cats-Logo {
-    width: 20vw;
+    width: 15vw;
 }
 /* 홈 끝 */
 
@@ -426,7 +426,8 @@ img {
 .gallery-box {
     width: 100%;
     height: 700px;
-
+    
+    margin-top: 45px;
     margin-bottom: 20px;
 
     display: flex;
