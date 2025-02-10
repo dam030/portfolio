@@ -1,5 +1,5 @@
 /* 태블릿릿 화면 */
-@media (min-width: 601px) and (max-width:1023px) {
+@media (min-width: 601px) and (max-width:1024px) {
     /* 메뉴 시작 */
     .menu {
         width: fit-content;
@@ -106,9 +106,10 @@
 
     .gallery-box {
         height: 600px;
+        margin-bottom: 10px;
     }
 
-    ..gallery-main img {
+    .gallery-main img {
         height: 600px;
     }
     /* 갤러리 끝 */
