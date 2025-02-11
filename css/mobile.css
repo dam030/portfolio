@@ -493,7 +493,7 @@
         width: 220px;
         height: 370px;
 
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .sound-button {
@@ -509,6 +509,7 @@
     }
     .soundtrack-text h1 {
         font-size: 32px;
+        bottom: 3px;
     }
     .soundtrack-text p {
         font-size: 8px;

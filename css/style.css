@@ -5,10 +5,39 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Paperlogy-4Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SBAggroM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     width: 100%;
     height: 100%;
     background-color: #000;
+
+    font-family: 'Paperlogy-4Regular', sans-serif;
 }
 
 img {
@@ -80,7 +109,7 @@ img {
 }
 
 .page {
-    font-weight: bolder;
+    font-family: 'Paperlogy-8ExtraBold', sans-serif;
 }
 /* 메뉴 끝 */
 
@@ -175,6 +204,7 @@ img {
     font-size: 20px;
     font-weight: bolder;
     color: #FFEF00;
+    font-family: 'SBAggroB', sans-serif;
 }
 /* 트레일러 끝 */
 
@@ -231,6 +261,7 @@ img {
 }
 
 .synopsis-text > h2 {
+    font-family: 'SBAggroB', sans-serif;
     font-size: 30px;
     line-height: 40px;
 
@@ -347,13 +378,13 @@ img {
 
 .characters-text > .character-name > h1 {
     font-size: 80px;
-    font-weight: bolder;
-    margin-bottom: 10px;
+    font-family: 'SBAggroB', sans-serif;
 }
 
 .characters-text > .character-name > h3 {
     font-size: 26px;
-    font-weight: bolder;
+    font-family: 'Paperlogy-8ExtraBold', sans-serif;
+    margin-bottom: 5px;
 }
 
 .characters-text > p {
@@ -384,6 +415,9 @@ img {
     position: absolute;
     bottom: 0;
 }
+.number3 .characters-text-box > .characters-text > .character-name > p {
+    margin-bottom: 0;
+}
 .number4 .characters-text-box > .characters-text {
     width: 100%;
     height: 160px;
@@ -401,6 +435,9 @@ img {
     position: absolute;
     text-align: left;
     bottom: 0;
+}
+.number5 .characters-text-box > .characters-text > .character-name > p {
+    margin-bottom: 0;
 }
 /* 캐릭터 끝 */
 
@@ -587,8 +624,8 @@ img {
 }
 
 .soundtrack-playlist {
-    width: 100%;
-    height: 530px;
+    width: 320px;
+    height: 535px;
     
     display: flex;
     flex-direction: column;
@@ -607,12 +644,15 @@ img {
 .soundtrack-text {
     position: absolute;
     left: 82px;
-    bottom: 0;
+    bottom: -4px;
 }
 
 .soundtrack-text h1 {
+    position: absolute;
+    bottom: 6px;
+
     font-size: 44px;
-    font-weight: bolder;
+    font-family: 'SBAggroB', sans-serif;
 }
 
 .soundtrack-text p {
@@ -663,18 +703,20 @@ img {
 .r-contant > h1 {
     font-size: 46px;
     line-height: 55px;
-    font-weight: bolder;
+    font-family: 'SBAggroB', sans-serif;
 }
 
 .r-contant > h2 {
     font-size: 32px;
     line-height: 40px;
     font-weight: bolder;
+    font-family: 'SBAggroM', sans-serif;
 }
 
 .r-contant > h3 {
     font-size: 28px;
     line-height: 32px;
+    font-family: 'Paperlogy-8ExtraBold', sans-serif;
 }
 
 .r-contant > p {

@@ -160,6 +160,7 @@
     }
     .soundtrack-text h1 {
         font-size: 40px;
+        bottom: 2px;
     }
     .soundtrack-text p {
         font-size: 9px;
