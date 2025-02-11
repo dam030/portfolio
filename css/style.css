@@ -235,7 +235,7 @@ img {
 
     position: absolute;
 
-    background-image: url('./img/background_1.jpg');
+    background-image: url('../img/background_1.jpg');
     background-position: center center;
 }
 
@@ -682,7 +682,7 @@ img {
     align-items: center;
     justify-content: center;
 
-    background-image: url('./img/background_2.jpg');
+    background-image: url('../img/background_2.jpg');
     background-position: center center;
 }
 
